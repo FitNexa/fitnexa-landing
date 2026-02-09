@@ -1,8 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
+@theme {
   --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
   --color-primary: #3b82f6;
   --color-secondary: #1e293b;
@@ -19,11 +17,11 @@
   .glass-card {
     @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-xl;
   }
-  
+
   .btn-primary {
     @apply bg-slate-900 text-white px-6 py-3 rounded-2xl font-bold hover:bg-slate-800 transition-all active:scale-95 shadow-lg shadow-slate-200;
   }
-  
+
   .btn-secondary {
     @apply bg-white text-slate-900 px-6 py-3 rounded-2xl font-bold border border-slate-200 hover:bg-slate-50 transition-all active:scale-95;
   }
@@ -37,9 +35,11 @@
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   @apply bg-slate-50;
 }
+
 ::-webkit-scrollbar-thumb {
   @apply bg-slate-200 rounded-full hover:bg-slate-300 transition-colors;
 }
