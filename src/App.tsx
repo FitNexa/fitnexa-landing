@@ -29,7 +29,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/playbook/:gymId" element={<GrowthPlaybook />} />
-          <Route path="/playbook" element={<GrowthPlaybook />} />
+          <Route path="/playbook" element={<Blog />} />
           <Route path="/wall-of-fame" element={<WallOfFame />} />
           {/* Fallback to home for demo purposes */}
           <Route path="*" element={<Home />} />
