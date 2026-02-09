@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import {
-  BarChart3, Globe, Users, ArrowRight,
+  Globe, Users, ArrowRight,
   Menu, X, Check, Building2,
-  Clock, Heart, Star, Shield,
+  Clock, Heart, Star,
   TrendingUp, Award, MessageSquare, BookOpen
 } from 'lucide-react';
 import { useState } from 'react';
