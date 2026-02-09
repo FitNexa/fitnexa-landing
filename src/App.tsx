@@ -63,33 +63,33 @@ const Hero = () => (
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-xs font-black uppercase tracking-widest mb-6">
-              The Future of Fitness Biz
+            <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-xs font-black uppercase tracking-widest mb-6 border border-blue-100">
+              The Gym Profit Engine
             </span>
             <h1 className="text-6xl md:text-7xl font-black text-slate-900 leading-[1.1] mb-8">
-              Digitize Your Gym in <span className="text-blue-600 italic underline decoration-blue-100 underline-offset-8">7 Minutes.</span>
+              Stop Churn. <span className="text-blue-600 italic underline decoration-blue-100 underline-offset-8">Digitize</span> Your Gym Today.
             </h1>
             <p className="text-xl text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-10">
-              Transform your physical location into a high-tech powerhouse. We provide the mobile ecosystem, admin dashboards, and AI tools—your brand, our tech.
+              Transform your physical floor into a high-retention digital ecosystem. Launch your branded mobile app, automate member tracking, and boost LTV in just 7 minutes.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
               <button className="w-full sm:w-auto px-10 py-5 bg-blue-600 text-white rounded-[24px] font-black text-lg shadow-2xl shadow-blue-200 hover:bg-blue-700 transition-all flex items-center justify-center group">
-                Build My Gym App <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                Scale My Gym Now <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button className="w-full sm:w-auto px-10 py-5 bg-white text-slate-900 rounded-[24px] font-black text-lg border-2 border-slate-100 hover:bg-slate-50 transition-all">
-                See Live Demo
+                View Owner Deck
               </button>
             </div>
           </motion.div>
 
           <div className="mt-12 flex items-center justify-center lg:justify-start space-x-8 opacity-60 grayscale scale-90 sm:scale-100">
-            <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">Trusted by leading chains</p>
+            <p className="text-xs font-bold text-slate-400 uppercase tracking-widest leading-tight">Optimizing<br />Return On Floor</p>
             <div className="h-6 w-px bg-slate-200" />
-            <span className="font-black text-slate-400 italic text-xl">IRON TEMPLE</span>
-            <span className="font-black text-slate-400 italic text-xl">FITLIFE</span>
-            <span className="font-black text-slate-400 italic text-xl">ZONE 5</span>
+            <span className="font-black text-slate-400 italic text-xl tracking-tighter">RETENTION +45%</span>
+            <span className="font-black text-slate-400 italic text-xl tracking-tighter">REVENUE x2.4</span>
           </div>
         </div>
+// ... (rest of Hero component visual remains the same)
 
         <motion.div
           className="flex-1 relative"
@@ -177,10 +177,10 @@ const LandingPage = () => {
       <section className="py-20 border-y border-slate-100 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-12">
           {[
+            { label: 'Member Retention', val: '+45%' },
             { label: 'Digitization Time', val: '7 min' },
-            { label: 'User Retention', val: '+45%' },
-            { label: 'Revenue Growth', val: 'x2.4' },
-            { label: 'Active Gyms', val: '500+' },
+            { label: 'Admin Hours Saved/Mo', val: '120h' },
+            { label: 'ROI Benchmark', val: '3.2x' },
           ].map((stat, i) => (
             <div key={i} className="text-center">
               <p className="text-4xl font-black text-slate-900 mb-2">{stat.val}</p>
@@ -194,27 +194,27 @@ const LandingPage = () => {
       <section id="features" className="py-32">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-5xl font-black text-slate-900 mb-6">Everything You Need to Dominate.</h2>
-            <p className="text-lg text-slate-500 font-medium">Why settle for generic software? Get a custom-branded experience that actually drives member loyalty.</p>
+            <h2 className="text-5xl font-black text-slate-900 mb-6">Build a Community, Not Just a Gym.</h2>
+            <p className="text-lg text-slate-500 font-medium">Why settle for generic CRM software? Get a custom-branded experience that eliminates churn and turns members into your biggest promoters.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FeatureCard
               iconPath={<Smartphone />}
-              title="White-Label App"
-              desc="Your brand on the App Store. Full theme control, custom icons, and premium UX that members love."
+              title="Branded Member App"
+              desc="Your logo in the App Store. Boost professional credibility and give members a premium experience they'll pay more for."
               delay={0.1}
             />
             <FeatureCard
-              iconPath={<Apple />}
-              title="AI Nutrition"
-              desc="Integrated Gemini-powered food scanner. Members log meals via camera and track goals automatically."
+              iconPath={<BarChart3 />}
+              title="Automated Operations"
+              desc="Track memberships, attendance, and payments without lifting a finger. Free your staff from the front desk."
               delay={0.2}
             />
             <FeatureCard
               iconPath={<Users />}
-              title="Community Squads"
-              desc="Social engagement via groups, leaderboards, and challenges. Members stay longer when they train together."
+              title="Social Loyalty Squads"
+              desc="Transform lone wolves into community squads. Shared goals and leaderboards keep members coming back month after month."
               delay={0.3}
             />
           </div>
@@ -237,15 +237,15 @@ const LandingPage = () => {
                     ))}
                   </div>
                   <h3 className="text-2xl font-black mb-6 flex items-center">
-                    <Zap className="text-blue-400 mr-2" /> Wizard Step 4: Branding
+                    <Zap className="text-blue-400 mr-2" /> Wizard Step 4: Floor Branding
                   </h3>
                   <div className="space-y-4">
                     <div className="flex items-center justify-between p-4 bg-white/5 rounded-2xl">
-                      <span className="text-sm font-bold">Primary Color</span>
+                      <span className="text-sm font-bold">Primary Floor Color</span>
                       <div className="w-8 h-8 rounded-full bg-blue-600 border-2 border-white/20" />
                     </div>
                     <div className="flex items-center justify-between p-4 bg-white/5 rounded-2xl">
-                      <span className="text-sm font-bold">Secondary Color</span>
+                      <span className="text-sm font-bold">Secondary Accents</span>
                       <div className="w-8 h-8 rounded-full bg-slate-800 border-2 border-white/20" />
                     </div>
                   </div>
@@ -262,18 +262,17 @@ const LandingPage = () => {
             </div>
 
             <div className="flex-1 order-1 lg:order-2">
-              <span className="text-blue-400 font-black tracking-widest uppercase text-xs">The Magic Moment</span>
-              <h2 className="text-5xl font-black mt-6 mb-8 leading-tight">Instant Digitization. No Code Required.</h2>
+              <span className="text-blue-400 font-black tracking-widest uppercase text-xs">A Modern Owner's Workflow</span>
+              <h2 className="text-5xl font-black mt-6 mb-8 leading-tight">Your Floor, Digitally Perfected.</h2>
               <p className="text-xl text-slate-400 font-medium leading-relaxed mb-8">
-                Our 7-step builder wizard lets you upload your logo, pick your colors, and toggle features like AI scanning or store management.
-                Watch it go live on mobile and admin panels in real-time.
+                Skip the expensive dev agencies. Our 7-step builder wizard lets you digitize your physical workflows, sync staff permissions, and go live instantly.
               </p>
               <ul className="space-y-4">
                 {[
-                  "Zero developer dependency",
-                  "Instant real-time preview",
-                  "Scalable cloud infrastructure",
-                  "Enterprise-grade security"
+                  "Zero Churn Strategy built-in",
+                  "Real-time revenue & staff heatmaps",
+                  "B2B Compliance & Tax automation",
+                  "Rapid ROI in < 30 days"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center text-slate-300 font-bold">
                     <CheckCircle2 className="text-green-400 w-5 h-5 mr-3" /> {item}
@@ -288,14 +287,14 @@ const LandingPage = () => {
       {/* CTA Final */}
       <section className="py-32 text-center relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 relative z-10">
-          <h2 className="text-6xl font-black text-slate-900 mb-8 pb-1">Ready to scale your gym?</h2>
-          <p className="text-xl text-slate-500 font-medium mb-12">Join 500+ premium gyms that upgraded their digital experience with FitNexa.</p>
+          <h2 className="text-6xl font-black text-slate-900 mb-8 pb-1">Ready to increase your LTV?</h2>
+          <p className="text-xl text-slate-500 font-medium mb-12">Join 500+ savvy gym owners who stopped losing members and started scaling their fitness empire.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-12 py-6 bg-blue-600 text-white rounded-[32px] font-black text-xl shadow-2xl shadow-blue-200 hover:scale-105 transition-all">
-              Get a Custom Quote
+              Request Sales Demo
             </button>
             <button className="px-12 py-6 bg-white text-slate-900 border-2 border-slate-100 rounded-[32px] font-black text-xl hover:bg-slate-50 transition-all">
-              Book a Demo
+              View Price Sheet
             </button>
           </div>
         </div>
