@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import {
   Rocket, Smartphone,
   Zap, Globe, CheckCircle2,
-  Users, BarChart3, Apple, Mail, ArrowRight,
+  Users, BarChart3, Mail, ArrowRight,
   Menu, X
 } from 'lucide-react';
 import { useState } from 'react';
