@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import {
-  Smartphone, Layers,
   BarChart3, Globe, Users, ArrowRight,
   Menu, X, Check, Building2,
   Clock, Heart, Star, Shield
