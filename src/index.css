@@ -2,13 +2,17 @@
 
 @theme {
   --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
-  --color-primary: #3b82f6;
-  --color-secondary: #1e293b;
+  --color-primary: #0f172a;
+  /* Navy */
+  --color-secondary: #334155;
+  /* Slate */
+  --color-brand: #2563eb;
+  /* Professional Blue */
 }
 
 @layer base {
   body {
-    @apply bg-slate-50 text-slate-900 antialiased overflow-x-hidden;
+    @apply bg-white text-slate-900 antialiased overflow-x-hidden;
     font-family: var(--font-inter);
   }
 }
