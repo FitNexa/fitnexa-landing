@@ -89,7 +89,6 @@ const Hero = () => (
             <span className="font-black text-slate-400 italic text-xl tracking-tighter">REVENUE x2.4</span>
           </div>
         </div>
-// ... (rest of Hero component visual remains the same)
 
         <motion.div
           className="flex-1 relative"
