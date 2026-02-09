@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import {
-  Rocket, Shield, Smartphone, Monitor,
-  Zap, Globe, ChevronRight, CheckCircle2,
+  Rocket, Smartphone,
+  Zap, Globe, CheckCircle2,
   Users, BarChart3, Apple, Mail, ArrowRight,
   Menu, X
 } from 'lucide-react';
