@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import {
-  Globe, Users, ArrowRight,
-  Menu, X, Check, Building2,
+  Globe, Users, ArrowRight, Layers,
+  Menu, X, Building2,
   Clock, Heart, Star,
   TrendingUp, Award, MessageSquare, BookOpen
 } from 'lucide-react';
@@ -167,58 +167,108 @@ const BenefitsGrid = () => (
 const StoriesSection = () => (
   <section id="stories" className="py-32 bg-white">
     <div className="max-w-7xl mx-auto px-6">
-      <div className="flex flex-col lg:flex-row items-center gap-16 mb-20">
-        <div className="flex-1">
-          <span className="text-blue-600 font-bold uppercase tracking-widest text-xs mb-4 block">Social Proof</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Real Stories from Real Gym Owners.</h2>
-          <p className="text-lg text-slate-600 font-medium">See how other fitness entrepreneurs have transformed their business using FitNexa's digital ecosystems.</p>
-        </div>
-        <div className="lg:text-right">
-          <button className="px-8 py-4 bg-slate-100 text-slate-950 rounded-xl font-bold hover:bg-slate-200 transition-all">View All Case Studies</button>
-        </div>
+      <div className="text-center max-w-3xl mx-auto mb-20">
+        <span className="text-blue-600 font-bold uppercase tracking-widest text-[10px] mb-4 block">Proven Performance</span>
+        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 transition-all">Business Transformation Stories.</h2>
+        <p className="text-lg text-slate-500 font-medium">We don't just provide software; we provide the foundation for your gym's growth. See how these owners achieved institutional success.</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="space-y-16">
         {[
           {
             club: "Iron Temple Global",
+            location: "Multi-Location (8 clubs)",
             owner: "Marcus V.",
-            outcome: "+40% Member Retention",
-            story: "We were losing members to cheaper chains. FitNexa allowed us to launch a white-labeled app that made us feel like a premium tech-enabled club. Churn dropped immediately.",
+            metrics: [
+              { label: "Retention", val: "+42%", icon: <Users className="w-4 h-4" /> },
+              { label: "Revenue", val: "x2.4", icon: <TrendingUp className="w-4 h-4" /> },
+              { label: "Staff Efficiency", val: "+60%", icon: <Clock className="w-4 h-4" /> }
+            ],
+            challenge: "Struggling with fragmented data across 8 locations and a manual entry system that drove staff burnout and member dissatisfaction.",
+            solution: "Implemented FitNexa Global Governance, centralizing all member data and launching a unified high-end branded mobile app for all 8 clubs.",
+            result: "Unified operations led to a 42% spike in retention and allowed the owner to open 2 new locations without increasing administrative headcount.",
             icon: <Award className="text-yellow-500" />
           },
           {
-            club: "FitLife Studio",
+            club: "Elite Performance Lab",
+            location: "Boutique Studio",
             owner: "Sarah J.",
-            outcome: "Saved 20h/week on Admin",
-            story: "Managing schedules across 3 locations was a nightmare. Now, everything is automated. I can focus on my trainers and my community again instead of spreadsheets.",
+            metrics: [
+              { label: "PT Bookings", val: "+85%", icon: <Star className="w-4 h-4" /> },
+              { label: "Admin Save", val: "120h/mo", icon: <Layers className="w-4 h-4" /> },
+              { label: "Member LTV", val: "+30%", icon: <TrendingUp className="w-4 h-4" /> }
+            ],
+            challenge: "Premium pricing was hard to justify without a premium digital experience. Personal training management was handled via WhatsApp and paper.",
+            solution: "Deployed the FitNexa 'Chameleon' app with automated PT scheduling and a dedicated social loyalty squad system for high-tier members.",
+            result: "Professionalized the brand instantly. PT bookings doubled within the first quarter and member lifetime value increased by 30%.",
             icon: <TrendingUp className="text-green-500" />
           }
         ].map((item, i) => (
           <motion.div
             key={i}
-            whileHover={{ y: -10 }}
-            className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 relative overflow-hidden"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className={`flex flex-col lg:flex-row gap-12 p-8 lg:p-16 bg-slate-50 rounded-[48px] border border-slate-100 relative overflow-hidden ${i % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
           >
-            <div className="relative z-10">
-              <div className="flex items-center gap-4 mb-8">
-                <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-xl">
+            <div className="flex-1 space-y-8 relative z-10">
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center border border-slate-100 text-2xl">
                   {item.icon}
                 </div>
                 <div>
-                  <p className="text-lg font-black text-slate-900">{item.club}</p>
-                  <p className="text-sm font-bold text-blue-600">{item.outcome}</p>
+                  <h3 className="text-2xl font-black text-slate-900 leading-tight">{item.club}</h3>
+                  <p className="text-sm font-bold text-slate-400 uppercase tracking-widest">{item.location}</p>
                 </div>
               </div>
-              <p className="text-slate-600 font-medium leading-relaxed italic mb-8">"{item.story}"</p>
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-slate-200 rounded-full" />
-                <span className="text-sm font-bold text-slate-900">{item.owner}</span>
-                <span className="text-sm text-slate-400 font-medium">— Founder</span>
+
+              <div className="grid grid-cols-3 gap-4">
+                {item.metrics.map((m, mi) => (
+                  <div key={mi} className="bg-white p-4 rounded-2xl border border-slate-100 flex flex-col items-center">
+                    <div className="text-blue-600 mb-2">{m.icon}</div>
+                    <p className="text-xl font-black text-slate-900">{m.val}</p>
+                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-tighter text-center">{m.label}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="space-y-6">
+                <div className="pl-4 border-l-2 border-slate-200">
+                  <p className="text-xs font-black text-slate-400 uppercase mb-2">The Challenge</p>
+                  <p className="text-slate-600 font-medium leading-relaxed italic">"{item.challenge}"</p>
+                </div>
+                <div className="pl-4 border-l-2 border-slate-900">
+                  <p className="text-xs font-black text-slate-900 uppercase mb-2">The Solution</p>
+                  <p className="text-slate-900 font-bold leading-relaxed">{item.solution}</p>
+                </div>
+                <div className="pl-4 border-l-2 border-blue-600 bg-blue-50/50 py-3 rounded-r-lg">
+                  <p className="text-xs font-black text-blue-600 uppercase mb-1">The Result</p>
+                  <p className="text-blue-900 font-black leading-relaxed">{item.result}</p>
+                </div>
               </div>
             </div>
-            {/* Background design element */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100/20 rounded-bl-full" />
+
+            <div className="flex-1 flex flex-col justify-center items-center lg:items-end">
+              <div className="relative group cursor-pointer max-w-sm">
+                <div className="absolute inset-0 bg-blue-600 rounded-[32px] rotate-3 group-hover:rotate-6 transition-transform -z-1 opacity-10" />
+                <div className="bg-white p-8 rounded-[32px] shadow-xl border border-slate-100 text-center space-y-6 group-hover:scale-[1.02] transition-all">
+                  <div className="w-20 h-20 bg-slate-100 rounded-full mx-auto relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate-200 to-slate-300" />
+                    <Users className="absolute inset-0 m-auto text-slate-400 w-10 h-10" />
+                  </div>
+                  <div>
+                    <p className="text-slate-900 font-black text-lg">{item.owner}</p>
+                    <p className="text-slate-400 font-bold text-sm">Founder @ {item.club}</p>
+                  </div>
+                  <p className="text-slate-500 font-medium text-sm italic leading-relaxed">
+                    "FitNexa turned my gym from a physical hustle into a digital powerhouse. The ROI was visible in 30 days."
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Subtle aesthetic element */}
+            <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-blue-400/5 rounded-full blur-[120px]" />
           </motion.div>
         ))}
       </div>
