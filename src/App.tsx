@@ -2,7 +2,8 @@ import { motion } from 'framer-motion';
 import {
   BarChart3, Globe, Users, ArrowRight,
   Menu, X, Check, Building2,
-  Clock, Heart, Star, Shield
+  Clock, Heart, Star, Shield,
+  TrendingUp, Award, MessageSquare, BookOpen
 } from 'lucide-react';
 import { useState } from 'react';
 
@@ -21,8 +22,8 @@ const Nav = () => {
 
         <div className="hidden md:flex items-center space-x-10">
           <a href="#benefits" className="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors">How it Works</a>
-          <a href="#features" className="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors">For Owners</a>
-          <a href="#contact" className="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors">Contact</a>
+          <a href="#stories" className="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors">Success Stories</a>
+          <a href="#blog" className="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors">Insights</a>
           <button className="bg-slate-900 text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-slate-800 transition-all">
             Get a Quote
           </button>
@@ -39,9 +40,9 @@ const Nav = () => {
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden bg-white border-b border-slate-200 p-6 space-y-4 shadow-xl"
         >
-          <a href="#benefits" className="block text-base font-semibold text-slate-900 focus:text-blue-600">How it Works</a>
-          <a href="#features" className="block text-base font-semibold text-slate-900 focus:text-blue-600">For Owners</a>
-          <a href="#contact" className="block text-base font-semibold text-slate-900 focus:text-blue-600">Contact</a>
+          <a href="#benefits" className="block text-base font-semibold text-slate-900">How it Works</a>
+          <a href="#stories" className="block text-base font-semibold text-slate-900">Success Stories</a>
+          <a href="#blog" className="block text-base font-semibold text-slate-900">Insights</a>
           <button className="w-full bg-slate-900 text-white py-3.5 rounded-lg font-bold">Inquire Now</button>
         </motion.div>
       )}
@@ -163,74 +164,132 @@ const BenefitsGrid = () => (
   </section>
 );
 
-const FeatureSection = () => (
-  <section id="features" className="py-32">
+const StoriesSection = () => (
+  <section id="stories" className="py-32 bg-white">
     <div className="max-w-7xl mx-auto px-6">
-      <div className="flex flex-col lg:flex-row items-center gap-20">
+      <div className="flex flex-col lg:flex-row items-center gap-16 mb-20">
         <div className="flex-1">
-          <h2 className="text-4xl font-bold text-slate-900 mb-8">Manage One Location or One Hundred.</h2>
-          <p className="text-lg text-slate-600 font-medium mb-10 leading-relaxed">
-            Whether you run a single boutique studio or a large fitness franchise, FitNexa scales with you. See how your clubs are performing in real-time.
-          </p>
-          <ul className="space-y-5">
-            {[
-              "See attendance at a glance",
-              "Manage staff from your phone",
-              "Send announcements to all members",
-              "Track revenue across all locations"
-            ].map((item, i) => (
-              <li key={i} className="flex items-center text-slate-700 font-semibold">
-                <Check className="w-5 h-5 text-green-500 mr-4 shrink-0" /> {item}
-              </li>
-            ))}
-          </ul>
+          <span className="text-blue-600 font-bold uppercase tracking-widest text-xs mb-4 block">Social Proof</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Real Stories from Real Gym Owners.</h2>
+          <p className="text-lg text-slate-600 font-medium">See how other fitness entrepreneurs have transformed their business using FitNexa's digital ecosystems.</p>
         </div>
-        <div className="flex-1 relative">
-          <div className="bg-slate-900 p-1 rounded-3xl overflow-hidden shadow-2xl">
-            <div className="bg-white p-6 space-y-6">
-              <div className="flex items-center gap-4 p-4 border border-slate-100 rounded-xl hover:bg-slate-50 transition-colors">
-                <div className="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center font-black">L1</div>
-                <div className="flex-1">
-                  <p className="text-sm font-bold text-slate-900">London Center</p>
-                  <p className="text-xs font-bold text-slate-400">94% Active</p>
+        <div className="lg:text-right">
+          <button className="px-8 py-4 bg-slate-100 text-slate-950 rounded-xl font-bold hover:bg-slate-200 transition-all">View All Case Studies</button>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        {[
+          {
+            club: "Iron Temple Global",
+            owner: "Marcus V.",
+            outcome: "+40% Member Retention",
+            story: "We were losing members to cheaper chains. FitNexa allowed us to launch a white-labeled app that made us feel like a premium tech-enabled club. Churn dropped immediately.",
+            icon: <Award className="text-yellow-500" />
+          },
+          {
+            club: "FitLife Studio",
+            owner: "Sarah J.",
+            outcome: "Saved 20h/week on Admin",
+            story: "Managing schedules across 3 locations was a nightmare. Now, everything is automated. I can focus on my trainers and my community again instead of spreadsheets.",
+            icon: <TrendingUp className="text-green-500" />
+          }
+        ].map((item, i) => (
+          <motion.div
+            key={i}
+            whileHover={{ y: -10 }}
+            className="p-10 bg-slate-50 rounded-[40px] border border-slate-100 relative overflow-hidden"
+          >
+            <div className="relative z-10">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-xl">
+                  {item.icon}
                 </div>
-                <div className="text-sm font-black text-green-500">$45.2k</div>
+                <div>
+                  <p className="text-lg font-black text-slate-900">{item.club}</p>
+                  <p className="text-sm font-bold text-blue-600">{item.outcome}</p>
+                </div>
               </div>
-              <div className="flex items-center gap-4 p-4 border border-slate-100 rounded-xl hover:bg-slate-50 transition-colors">
-                <div className="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center font-black">L2</div>
-                <div className="flex-1">
-                  <p className="text-sm font-bold text-slate-900">NYC Downtown</p>
-                  <p className="text-xs font-bold text-slate-400">88% Active</p>
-                </div>
-                <div className="text-sm font-black text-green-500">$62.8k</div>
+              <p className="text-slate-600 font-medium leading-relaxed italic mb-8">"{item.story}"</p>
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 bg-slate-200 rounded-full" />
+                <span className="text-sm font-bold text-slate-900">{item.owner}</span>
+                <span className="text-sm text-slate-400 font-medium">— Founder</span>
               </div>
             </div>
+            {/* Background design element */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100/20 rounded-bl-full" />
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const BlogSection = () => (
+  <section id="blog" className="py-32 bg-slate-50">
+    <div className="max-w-7xl mx-auto px-6">
+      <div className="text-center mb-20">
+        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 italic underline decoration-blue-100 underline-offset-8">Owner Insights.</h2>
+        <p className="text-lg text-slate-600 font-medium max-w-2xl mx-auto">Practical advice on growing your gym, managing staff, and keeping members happy in the digital age.</p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          {
+            title: "5 Ways to Stop Member Churn Before it Starts",
+            category: "Retention",
+            readTime: "6 min read",
+            icon: <MessageSquare />
+          },
+          {
+            title: "Digital vs. Physical: Finding the Balance in 2026",
+            category: "Strategy",
+            readTime: "8 min read",
+            icon: <Globe />
+          },
+          {
+            title: "Automating Your Member Check-In Experience",
+            category: "Operations",
+            readTime: "4 min read",
+            icon: <BookOpen />
+          }
+        ].map((item, i) => (
+          <div key={i} className="bg-white rounded-3xl border border-slate-100 p-8 hover:shadow-xl transition-all group flex flex-col justify-between">
+            <div>
+              <span className="inline-block px-3 py-1 bg-slate-100 text-slate-500 text-[10px] font-black uppercase tracking-widest rounded mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                {item.category}
+              </span>
+              <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors leading-snug">
+                {item.title}
+              </h3>
+            </div>
+            <div className="flex items-center justify-between text-xs font-bold text-slate-400 mt-8">
+              <span className="flex items-center gap-1">{item.icon} {item.readTime}</span>
+              <span className="text-blue-600 flex items-center group-hover:gap-2 transition-all">Read More <ArrowRight className="w-4 h-4 ml-1" /></span>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   </section>
 );
 
 const CTASection = () => (
-  <section id="contact" className="py-32 bg-slate-900 text-white overflow-hidden relative">
+  <section id="contact" className="py-40 bg-slate-900 text-white overflow-hidden relative">
     <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-      <h2 className="text-4xl md:text-5xl font-bold mb-8">Ready to Professionalize Your Gym?</h2>
-      <p className="text-xl text-slate-400 font-medium mb-12">Join hundreds of successful owners who chose FitNexa to run their business.</p>
+      <h2 className="text-4xl md:text-5xl font-bold mb-8">Ready to Level Up Your Gym?</h2>
+      <p className="text-xl text-slate-400 font-medium mb-12">Join hundreds of successful owners who chose FitNexa to run their fitness empire.</p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <button className="px-10 py-5 bg-blue-600 text-white rounded-xl font-bold text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-500/20">
+        <button className="px-12 py-6 bg-blue-600 text-white rounded-xl font-bold text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-500/20">
           Get Your Custom Quote
         </button>
-        <button className="px-10 py-5 bg-white/10 text-white border border-white/20 rounded-xl font-bold text-lg hover:bg-white/20 transition-all backdrop-blur-sm">
+        <button className="px-12 py-6 bg-white/10 text-white border border-white/20 rounded-xl font-bold text-lg hover:bg-white/20 transition-all backdrop-blur-sm">
           Talk to Our Experts
         </button>
       </div>
-      <div className="mt-16 flex items-center justify-center space-x-8 opacity-40">
-        <div className="flex items-center gap-2"><Shield className="w-4 h-4" /><span className="text-[10px] font-bold uppercase tracking-widest">Secure Data</span></div>
-        <div className="flex items-center gap-2"><Globe className="w-4 h-4" /><span className="text-[10px] font-bold uppercase tracking-widest">Global Support</span></div>
-      </div>
     </div>
-    {/* Subtle background circles */}
+    {/* Decorative circles */}
     <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
       <div className="absolute top-1/2 left-1/4 w-96 h-96 border border-white rounded-full translate-x-[-50%] translate-y-[-50%]" />
       <div className="absolute top-1/2 left-3/4 w-[500px] h-[500px] border border-white rounded-full translate-x-[-50%] translate-y-[-50%]" />
@@ -239,16 +298,50 @@ const CTASection = () => (
 );
 
 const Footer = () => (
-  <footer className="py-16 bg-white border-t border-slate-100">
-    <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
-      <div className="flex items-center space-x-2">
-        <Building2 className="text-slate-900 w-6 h-6" />
-        <span className="text-sm font-bold tracking-tight text-slate-900">FitNexa <span className="text-blue-600">Enterprise</span></span>
+  <footer className="py-20 bg-white border-t border-slate-100">
+    <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-16">
+      <div>
+        <div className="flex items-center space-x-2 mb-6">
+          <Building2 className="text-slate-900 w-6 h-6" />
+          <span className="text-lg font-bold text-slate-900 uppercase tracking-tighter">FitNexa <span className="text-blue-600">Enterprise</span></span>
+        </div>
+        <p className="text-sm font-medium text-slate-400 max-w-xs leading-relaxed">
+          Simplifying the digital gym for owners who value results and member loyalty.
+        </p>
       </div>
-      <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">© 2026 FitNexa Systems Inc. Simplified Management for Pros.</p>
-      <div className="flex space-x-6">
-        <Globe className="w-5 h-5 text-slate-300" />
-        <BarChart3 className="w-5 h-5 text-slate-300" />
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-16">
+        <div className="space-y-4">
+          <p className="text-xs font-black text-slate-900 uppercase tracking-widest">Platform</p>
+          <ul className="text-sm font-bold text-slate-400 space-y-2">
+            <li><a href="#" className="hover:text-blue-600 transition-colors">How it Works</a></li>
+            <li><a href="#" className="hover:text-blue-600 transition-colors">Success Stories</a></li>
+            <li><a href="#" className="hover:text-blue-600 transition-colors">Blog</a></li>
+          </ul>
+        </div>
+        <div className="space-y-4">
+          <p className="text-xs font-black text-slate-900 uppercase tracking-widest">Company</p>
+          <ul className="text-sm font-bold text-slate-400 space-y-2">
+            <li><a href="#" className="hover:text-blue-600 transition-colors">About Us</a></li>
+            <li><a href="#" className="hover:text-blue-600 transition-colors">Pricing</a></li>
+            <li><a href="#" className="hover:text-blue-600 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div className="space-y-4">
+          <p className="text-xs font-black text-slate-900 uppercase tracking-widest">Industry</p>
+          <ul className="text-sm font-bold text-slate-400 space-y-2">
+            <li><a href="#" className="hover:text-blue-600 transition-colors">For Franchises</a></li>
+            <li><a href="#" className="hover:text-blue-600 transition-colors">Security</a></li>
+            <li><a href="#" className="hover:text-blue-600 transition-colors">API Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div className="max-w-7xl mx-auto px-6 pt-12 mt-12 border-t border-slate-50 flex flex-col md:flex-row justify-between items-center gap-6">
+      <p className="text-[10px] font-black text-slate-300 uppercase tracking-[0.2em]">© 2026 FitNexa Systems Inc. All rights reserved.</p>
+      <div className="flex space-x-6 text-slate-300">
+        <Globe className="w-5 h-5 hover:text-blue-600 transition-colors" />
+        <Star className="w-5 h-5 hover:text-blue-600 transition-colors" />
       </div>
     </div>
   </footer>
@@ -260,7 +353,8 @@ const LandingPage = () => {
       <Nav />
       <Hero />
       <BenefitsGrid />
-      <FeatureSection />
+      <StoriesSection />
+      <BlogSection />
       <CTASection />
       <Footer />
     </div>
