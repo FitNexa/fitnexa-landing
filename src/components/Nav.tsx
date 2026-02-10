@@ -30,9 +30,9 @@ export const Nav = () => {
                     <Link to="/" onClick={() => scrollToSection('benefits')} className="text-xs font-bold text-slate-500 hover:text-slate-900 transition-colors uppercase tracking-[0.2em]">The Floor</Link>
                     <Link to="/wall-of-fame" className="text-xs font-bold text-slate-500 hover:text-slate-900 transition-colors uppercase tracking-[0.2em]">Wall of Fame</Link>
                     <Link to="/playbook" className="text-xs font-bold text-slate-500 hover:text-slate-900 transition-colors uppercase tracking-[0.2em]">The Playbook</Link>
-                    <Link to="/contact" className="bg-slate-950 text-white px-8 py-2.5 rounded font-black text-[10px] uppercase tracking-[0.2em] hover:bg-slate-800 transition-all border border-slate-800">
+                    <a href="http://localhost:3009" className="bg-slate-950 text-white px-8 py-2.5 rounded font-black text-[10px] uppercase tracking-[0.2em] hover:bg-slate-800 transition-all border border-slate-800">
                         Build Your Empire
-                    </Link>
+                    </a>
                 </div>
 
                 <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
