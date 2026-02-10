@@ -1,7 +1,7 @@
 import {
   Dumbbell, Activity, Timer,
   Shield, Users, TrendingUp, Star,
-  Target, Zap, Globe, Award
+  Target, Zap, Globe
 } from 'lucide-react';
 import React from 'react';
 

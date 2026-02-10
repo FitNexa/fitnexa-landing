@@ -1,73 +1,87 @@
-# React + TypeScript + Vite
+# FitNexa Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The official marketing and waitlist landing page for the FitNexa platform.
 
-Currently, two official plugins are available:
+## 🚀 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a **React + TypeScript + Vite** application designed to showcase FitNexa's features, pricing, and value proposition. It includes a waitlist signup form, blog (The Playbook), and interactive UI elements.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework:** React 18
+- **Build Tool:** Vite
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS + Framer Motion
+- **Icons:** Lucide React
+- **Routing:** React Router DOM
+- **Deployment:** Vercel
 
-## Expanding the ESLint configuration
+## 🏗️ Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+fitnexa-landing/
+├── src/
+│   ├── components/     # Reusable UI components (Hero, Features, Pricing, etc.)
+│   ├── pages/          # Page views (Home, Blog, BlogPost)
+│   ├── assets/         # Images and icons
+│   ├── styles/         # Global styles (Tailwind)
+│   ├── App.tsx         # Main application component
+│   └── main.tsx        # Entry point
+├── public/             # Static assets
+└── vite.config.ts      # Vite configuration
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚦 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js 18+
+- npm
+
+### Installation
+
+```bash
+# Install dependencies
+npm install
 ```
+
+### Development
+
+```bash
+# Start dev server
+npm run dev
+```
+The app will open at `http://localhost:5173` (or the next available port).
+
+### Building for Production
+
+```bash
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## 🌐 Deployment
+
+This project is configured for deployment on **Vercel**.
+
+1.  Push changes to the `main` branch.
+2.  Vercel automatically detects the Vite framework and builds the project.
+3.  The `playbook` route is handled via client-side routing.
+
+## 📝 Key Features
+
+-   **Waitlist Signup:** Captures user interest.
+-   **The Playbook:** A blog section sharing insights and updates.
+-   **Responsive Design:** Optimized for mobile, tablet, and desktop.
+-   **Animations:** Smooth transitions using Framer Motion.
+
+## 🤝 Contributing
+
+1.  Fork the repository.
+2.  Create a feature branch (`git checkout -b feature/amazing-feature`).
+3.  Commit your changes.
+4.  Push to the branch.
+5.  Open a Pull Request.

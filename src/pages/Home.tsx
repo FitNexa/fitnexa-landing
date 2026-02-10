@@ -1,9 +1,7 @@
 import { motion } from 'framer-motion';
 import {
     Users, ArrowRight,
-    Star,
-    TrendingUp, Award,
-    Dumbbell, Activity, Timer, Zap
+    Dumbbell, Activity, Timer, Zap, Award
 } from 'lucide-react';
 
 import { Link } from 'react-router-dom'; import { BrandPreview } from '../components/BrandPreview';
