@@ -29,7 +29,7 @@ const Hero = () => (
                             Transform your physical floor into a high-performance digital empire. Your brand, your members, your muscle—professionalized with FitNexa's elite digital infrastructure.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                            <a href="http://localhost:3009" className="w-full sm:w-auto px-12 py-5 bg-blue-600 text-white rounded font-black text-xs uppercase tracking-[0.2em] hover:bg-blue-700 transition-all flex items-center justify-center group shadow-2xl shadow-blue-200">
+                            <a href={import.meta.env.VITE_ONBOARDING_URL || 'https://onboard.uat.gymia.fit'} className="w-full sm:w-auto px-12 py-5 bg-blue-600 text-white rounded font-black text-xs uppercase tracking-[0.2em] hover:bg-blue-700 transition-all flex items-center justify-center group shadow-2xl shadow-blue-200">
                                 Start Your Build <ArrowRight className="ml-3 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </a>
                             <button className="w-full sm:w-auto px-12 py-5 bg-white text-slate-950 border-2 border-slate-950 rounded font-black text-xs uppercase tracking-[0.2em] hover:bg-slate-50 transition-all">
