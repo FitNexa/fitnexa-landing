@@ -230,11 +230,56 @@ const StoriesSection = () => {
 );
 };
 
+const HowItWorks = () => {
+    const { t } = useTranslation();
+    const onboardingUrl = import.meta.env.VITE_ONBOARDING_URL || 'https://onboarding.uat.gymia.fit';
+    const steps = [
+        { num: '01', title: t('how_it_works.step1_title', 'Build Your Brand'), desc: t('how_it_works.step1_desc', 'Pick your name, colours and logo. See a live preview of your branded mobile app and admin dashboard.') },
+        { num: '02', title: t('how_it_works.step2_title', 'Complete Onboarding'), desc: t('how_it_works.step2_desc', 'Choose features, enter your admin details and submit. You will receive an activation email within seconds.') },
+        { num: '03', title: t('how_it_works.step3_title', 'Customise in Dashboard'), desc: t('how_it_works.step3_desc', 'Log in to your Gym Admin dashboard, fine-tune branding, toggle modules and connect socials.') },
+        { num: '04', title: t('how_it_works.step4_title', 'Generate & Test APK'), desc: t('how_it_works.step4_desc', 'Hit the Generate UAT Build button. In minutes, download a branded Android APK to test with your team.') },
+    ];
+    return (
+        <section className="py-32 bg-white">
+            <div className="max-w-7xl mx-auto px-6">
+                <div className="text-center max-w-3xl mx-auto mb-20">
+                    <div className="w-px h-12 bg-blue-600 mx-auto" />
+                    <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight mt-6">
+                        {t('how_it_works.title', 'From Zero to')} <span className="text-blue-600">{t('how_it_works.title2', 'Your Own App')}</span>
+                    </h2>
+                    <p className="text-xl text-slate-500 font-bold mt-6">{t('how_it_works.subtitle', 'Four steps. No code. Full control.')}</p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {steps.map((step) => (
+                        <div key={step.num} className="relative p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:border-blue-200 hover:shadow-xl transition-all group">
+                            <div className="text-6xl font-black text-slate-100 group-hover:text-blue-100 transition-colors absolute top-4 right-6 select-none">{step.num}</div>
+                            <div className="relative z-10">
+                                <h3 className="text-xl font-black text-slate-900 mb-3">{step.title}</h3>
+                                <p className="text-slate-500 font-medium leading-relaxed">{step.desc}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <div className="text-center mt-16">
+                    <a
+                        href={onboardingUrl}
+                        className="inline-flex items-center gap-3 px-12 py-5 bg-blue-600 text-white rounded font-black text-xs uppercase tracking-[0.2em] hover:bg-blue-700 transition-all shadow-2xl shadow-blue-200 group"
+                    >
+                        {t('how_it_works.cta', 'Start Building Now')}
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </a>
+                </div>
+            </div>
+        </section>
+    );
+};
+
 const Home = () => {
     return (
         <div className="bg-white">
             <Hero />
             <BrandPreview />
+            <HowItWorks />
             <BenefitsGrid />
             <StoriesSection />
         </div>
