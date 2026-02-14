@@ -2,9 +2,11 @@ import { motion } from 'framer-motion';
 import { Search, ArrowRight, Clock } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { blogs } from '../data/blogs';
 
 const Blog = () => {
+    const { t } = useTranslation();
     const [searchQuery, setSearchQuery] = useState('');
     const [activeCategory, setActiveCategory] = useState('All');
 
@@ -22,12 +24,12 @@ const Blog = () => {
             <div className="max-w-7xl mx-auto px-6">
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-12 mb-20">
                     <div className="max-w-2xl">
-                        <span className="text-blue-600 font-black uppercase tracking-[0.4em] text-[10px] mb-4 block">The Playbook</span>
+                        <span className="text-blue-600 font-black uppercase tracking-[0.4em] text-[10px] mb-4 block">{t('blog.section_label')}</span>
                         <h1 className="text-5xl md:text-7xl font-black text-slate-900 leading-none tracking-tighter mb-8">
-                            Iron-Clad <span className="text-blue-600">Insights.</span>
+                            {t('blog.title_line1')} <span className="text-blue-600">{t('blog.title_line2')}</span>
                         </h1>
                         <p className="text-xl text-slate-500 font-bold leading-relaxed border-l-4 border-slate-200 pl-6">
-                            Expert strategies for gym founders aiming to scale their physical footprint into a high-performance digital empire.
+                            {t('blog.description')}
                         </p>
                     </div>
 
@@ -36,7 +38,7 @@ const Blog = () => {
                             <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5 group-focus-within:text-blue-600 transition-colors" />
                             <input
                                 type="text"
-                                placeholder="Search the archives..."
+                                placeholder={t('blog.search_placeholder')}
                                 className="w-full pl-16 pr-6 py-5 bg-white border-2 border-slate-100 rounded-2xl focus:border-blue-600 outline-none font-bold text-slate-900 transition-all shadow-sm focus:shadow-xl"
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -55,7 +57,7 @@ const Blog = () => {
                                 : 'bg-white text-slate-400 hover:text-slate-900 border border-slate-100'
                                 }`}
                         >
-                            {cat}
+                            {cat === 'All' ? t('blog.category_all') : cat}
                         </button>
                     ))}
                 </div>
@@ -95,7 +97,7 @@ const Blog = () => {
                                             to={`/blog/${blog.id}`}
                                             className="flex items-center text-[10px] font-black text-slate-900 uppercase tracking-widest group-hover:translate-x-1 transition-transform"
                                         >
-                                            Read More <ArrowRight className="ml-2 w-4 h-4 text-blue-600" />
+                                            {t('blog.read_more')} <ArrowRight className="ml-2 w-4 h-4 text-blue-600" />
                                         </Link>
                                     </div>
                                 </div>
@@ -107,8 +109,8 @@ const Blog = () => {
                 {filteredBlogs.length === 0 && (
                     <div className="text-center py-40">
                         <Search className="w-20 h-20 text-slate-100 mx-auto mb-10" />
-                        <p className="text-2xl font-black text-slate-900 uppercase">No Archives Found</p>
-                        <p className="text-slate-400 font-bold mt-4">Try searching for different high-performance keywords.</p>
+                        <p className="text-2xl font-black text-slate-900 uppercase">{t('blog.no_results_title')}</p>
+                        <p className="text-slate-400 font-bold mt-4">{t('blog.no_results_desc')}</p>
                     </div>
                 )}
             </div>

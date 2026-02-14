@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
     Users, Activity, Timer,
     Dumbbell, Star, ChevronRight,
@@ -7,6 +8,7 @@ import {
 } from 'lucide-react';
 
 export const BrandPreview = () => {
+    const { t } = useTranslation();
     const [gymName, setGymName] = useState('Iron Temple');
     const [primaryColor, setPrimaryColor] = useState('#2563eb');
     const [previewMode, setPreviewMode] = useState<'mobile' | 'desktop'>('mobile');
@@ -19,29 +21,29 @@ export const BrandPreview = () => {
                 <div className="flex flex-col lg:flex-row gap-20 items-center">
                     <div className="flex-1 space-y-12">
                         <div>
-                            <span className="text-blue-500 font-black uppercase tracking-[0.4em] text-[10px] mb-4 block">Transformation Engine</span>
+                            <span className="text-blue-500 font-black uppercase tracking-[0.4em] text-[10px] mb-4 block">{t('brand_preview.section_label')}</span>
                             <h2 className="text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter mb-8">
-                                Your Brand. <br /> <span className="text-blue-500">Our Power.</span>
+                                {t('brand_preview.title_line1')} <br /> <span className="text-blue-500">{t('brand_preview.title_line2')}</span>
                             </h2>
                             <p className="text-xl text-slate-400 font-bold leading-relaxed max-w-xl">
-                                The FitNexa "Chameleon" engine adapts instantly to your identity. Experience how your gym looks when professionalized with elite digital infrastructure.
+                                {t('brand_preview.description')}
                             </p>
                         </div>
 
                         <div className="p-10 bg-white/5 rounded-[40px] border border-white/10 space-y-8 backdrop-blur-xl">
                             <div className="space-y-4">
-                                <label className="text-[10px] font-black uppercase tracking-widest text-slate-500">Facility Designation</label>
+                                <label className="text-[10px] font-black uppercase tracking-widest text-slate-500">{t('brand_preview.gym_name_label')}</label>
                                 <input
                                     type="text"
                                     value={gymName}
                                     onChange={(e) => setGymName(e.target.value)}
                                     className="w-full bg-white/5 border-2 border-white/10 rounded-2xl p-5 font-black text-xl text-white outline-none focus:border-blue-500 focus:bg-white/10 transition-all"
-                                    placeholder="Enter Gym Name..."
+                                    placeholder={t('brand_preview.gym_name_placeholder')}
                                 />
                             </div>
 
                             <div className="space-y-4">
-                                <label className="text-[10px] font-black uppercase tracking-widest text-slate-500">Brand Color DNA</label>
+                                <label className="text-[10px] font-black uppercase tracking-widest text-slate-500">{t('brand_preview.color_label')}</label>
                                 <div className="flex flex-wrap gap-4">
                                     {['#2563eb', '#dc2626', '#16a34a', '#9333ea', '#ea580c', '#0f172a'].map((color) => (
                                         <button
@@ -65,7 +67,13 @@ export const BrandPreview = () => {
                                 </div>
                             </div>
 
-                            <div className="pt-8 border-t border-white/10 flex items-center justify-between">
+                            <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-6">
+                                <a
+                                    href={`${import.meta.env.VITE_ONBOARDING_URL || 'https://onboarding.uat.gymia.fit'}/onboard?gymName=${encodeURIComponent(gymName)}&primaryColor=${encodeURIComponent(primaryColor)}`}
+                                    className="px-8 py-4 rounded-2xl font-black text-xs uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-2 bg-white text-slate-900 hover:bg-slate-100 shadow-xl"
+                                >
+                                    {t('brand_preview.cta')} <ChevronRight className="w-4 h-4" />
+                                </a>
                                 <div className="flex gap-2 p-1 bg-white/5 rounded-xl border border-white/10">
                                     <button
                                         onClick={() => setPreviewMode('mobile')}
@@ -81,7 +89,7 @@ export const BrandPreview = () => {
                                     </button>
                                 </div>
                                 <span className="text-[10px] font-black uppercase tracking-widest text-slate-500 flex items-center">
-                                    <Activity className="mr-2 w-4 h-4 text-green-500 animate-pulse" /> Live Sync Active
+                                    <Activity className="mr-2 w-4 h-4 text-green-500 animate-pulse" /> {t('brand_preview.live_sync')}
                                 </span>
                             </div>
                         </div>
@@ -110,14 +118,14 @@ export const BrandPreview = () => {
                                             <div className="p-6 rounded-3xl text-white shadow-xl flex flex-col justify-between h-40 group overflow-hidden relative" style={{ backgroundColor: primaryColor }}>
                                                 <div className="relative z-10 flex justify-between items-start">
                                                     <div>
-                                                        <p className="text-[10px] font-black uppercase tracking-widest opacity-80">Member Status</p>
-                                                        <p className="text-2xl font-black">Elite Tier</p>
+                                                        <p className="text-[10px] font-black uppercase tracking-widest opacity-80">{t('brand_preview_preview.member_status')}</p>
+                                                        <p className="text-2xl font-black">{t('brand_preview_preview.elite_tier')}</p>
                                                     </div>
                                                     <Dumbbell className="w-8 h-8 opacity-40 group-hover:scale-110 transition-transform" />
                                                 </div>
                                                 <div className="relative z-10 flex justify-between items-end">
                                                     <div>
-                                                        <p className="text-[10px] font-black uppercase tracking-widest opacity-80">Points</p>
+                                                        <p className="text-[10px] font-black uppercase tracking-widest opacity-80">{t('brand_preview_preview.points')}</p>
                                                         <p className="text-xl font-black">12,480</p>
                                                     </div>
                                                     <ChevronRight className="w-6 h-6" />
@@ -128,8 +136,8 @@ export const BrandPreview = () => {
 
                                         <div className="grid grid-cols-2 gap-4">
                                             {[
-                                                { label: 'Steps', val: '8,422', icon: Activity },
-                                                { label: 'Time', val: '45m', icon: Timer }
+                                                { label: t('brand_preview_preview.steps'), val: '8,422', icon: Activity },
+                                                { label: t('brand_preview_preview.time'), val: '45m', icon: Timer }
                                             ].map((item, i) => (
                                                 <div key={i} className="p-4 bg-white rounded-2xl border border-slate-100 shadow-sm">
                                                     <item.icon className="w-5 h-5 mb-2" style={{ color: primaryColor }} />
@@ -140,7 +148,7 @@ export const BrandPreview = () => {
                                         </div>
 
                                         <div className="space-y-4">
-                                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Recommended Training</p>
+                                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{t('brand_preview_preview.recommended_training')}</p>
                                             <div className="space-y-3">
                                                 {[1, 2, 3].map(i => (
                                                     <div key={i} className="p-4 bg-white rounded-2xl border border-slate-100 flex items-center gap-4 group cursor-pointer hover:border-slate-300 transition-all">
@@ -192,11 +200,11 @@ export const BrandPreview = () => {
                                         <main className="flex-1 p-10 space-y-10 overflow-y-auto scroll-smooth">
                                             <div className="flex justify-between items-end">
                                                 <div>
-                                                    <h3 className="text-3xl font-black">Performance Dashboard</h3>
-                                                    <p className="text-sm font-bold text-slate-400 mt-2 uppercase tracking-widest">{gymName} Operations Hub</p>
+                                                    <h3 className="text-3xl font-black">{t('brand_preview_preview.performance_dashboard')}</h3>
+                                                    <p className="text-sm font-bold text-slate-400 mt-2 uppercase tracking-widest">{gymName} {t('brand_preview_preview.operations_hub')}</p>
                                                 </div>
-                                                <button className="px-8 py-3 rounded-xl text-white text-[10px] font-black uppercase tracking-widest shadow-xl" style={{ backgroundColor: primaryColor }}>
-                                                    Export Analytics
+                                                <button type="button" className="px-8 py-3 rounded-xl text-white text-[10px] font-black uppercase tracking-widest shadow-xl" style={{ backgroundColor: primaryColor }}>
+                                                    {t('brand_preview_preview.export_analytics')}
                                                 </button>
                                             </div>
                                             <div className="grid grid-cols-3 gap-8">
@@ -209,7 +217,7 @@ export const BrandPreview = () => {
                                                             <span className="text-green-500 font-black text-xs">↑ 12%</span>
                                                         </div>
                                                         <div>
-                                                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-2">Metrics L{i}</p>
+                                                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-2">{t('brand_preview_preview.metrics', { num: i })}</p>
                                                             <p className="text-3xl font-black leading-none">84.2%</p>
                                                         </div>
                                                     </div>
@@ -222,7 +230,7 @@ export const BrandPreview = () => {
                                                     ))}
                                                 </div>
                                                 <div className="absolute top-10 left-10">
-                                                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Global Retention Curve</p>
+                                                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{t('brand_preview_preview.retention_curve')}</p>
                                                 </div>
                                             </div>
                                         </main>

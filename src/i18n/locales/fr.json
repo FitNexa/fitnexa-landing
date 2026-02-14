@@ -1,0 +1,98 @@
+{
+    "hero": {
+        "badge": "Opérations Solides 2026",
+        "title_line1": "Force",
+        "title_line2": "dans les Données.",
+        "description": "Transformez votre espace physique en empire numérique haute performance. Votre marque, vos membres, votre muscle—professionnalisés avec l'infrastructure numérique d'élite de FitNexa.",
+        "cta_primary": "Commencez Votre Construction",
+        "cta_secondary": "Les Plans"
+    },
+    "hero_cards": {
+        "active_memberships": "Abonnements Actifs",
+        "peak_performance": "Performance de Pointe",
+        "sync_active": "Synchronisation Active",
+        "growth": "Croissance",
+        "retention": "Rétention"
+    },
+    "brand_preview": {
+        "section_label": "Moteur de Transformation",
+        "title_line1": "Votre Marque.",
+        "title_line2": "Notre Puissance.",
+        "description": "Le moteur \"Caméléon\" de FitNexa s'adapte instantanément à votre identité.",
+        "gym_name_label": "Désignation du Centre",
+        "gym_name_placeholder": "Entrez le nom de la salle...",
+        "color_label": "ADN de la Couleur de Marque",
+        "live_sync": "Synchronisation Live Active",
+        "cta": "Commencez à Construire Votre App"
+    },
+    "brand_preview_preview": {
+        "member_status": "Statut Membre",
+        "elite_tier": "Niveau Elite",
+        "points": "Points",
+        "steps": "Pas",
+        "time": "Temps",
+        "recommended_training": "Entraînement Recommandé",
+        "performance_dashboard": "Tableau de Bord Performance",
+        "operations_hub": "Centre d'Opérations",
+        "export_analytics": "Exporter les Analyses",
+        "metrics": "Métriques L{{num}}",
+        "retention_curve": "Courbe de Rétention Globale"
+    },
+    "benefits": {
+        "title_line1": "Salles d'Élite",
+        "title_line2": "Exigent des Solutions Modernes.",
+        "description": "Oubliez les tableurs obsolètes. FitNexa fournit les fondations solides dont votre salle a besoin.",
+        "branded_core_title": "Le Cœur de Marque",
+        "branded_core_desc": "Votre logo, vos couleurs, vos règles. Lancez une app membres personnalisée.",
+        "automated_title": "Muscle Automatisé",
+        "automated_desc": "Fini le travail administratif mécanique. Automatisez la facturation et le suivi.",
+        "community_title": "Or de la Communauté",
+        "community_desc": "Transformez les loups solitaires en vos plus fidèles défenseurs."
+    },
+    "stories": {
+        "title_line1": "Preuve de",
+        "title_line2": "Domination.",
+        "description": "Découvrez comment les salles de premier plan utilisent FitNexa pour dominer la concurrence.",
+        "view_playbook": "Voir le Playbook",
+        "view_wall": "Voir le Wall of Fame",
+        "irontemple": "Iron Temple",
+        "irontemple_quote": "Nous n'avons pas juste survécu à l'invasion des grandes chaînes. Nous les avons écrasées.",
+        "greentheory": "Green Theory",
+        "greentheory_quote": "La haute intensité bat le haut volume. Nous l'avons prouvé avec les données."
+    },
+    "blog": {
+        "section_label": "Le Playbook",
+        "title_line1": "Perspectives",
+        "title_line2": "Solides.",
+        "description": "Stratégies d'experts pour fondateurs de salles visant à scaler.",
+        "search_placeholder": "Rechercher dans les archives...",
+        "read_more": "Lire la suite",
+        "no_results_title": "Aucune archive trouvée",
+        "no_results_desc": "Essayez de rechercher avec d'autres mots.",
+        "category_all": "Tous"
+    },
+    "nav": {
+        "brand": "FitNexa",
+        "brand_elite": "Elite",
+        "the_floor": "Le Sol",
+        "wall_of_fame": "Wall of Fame",
+        "playbook": "Le Playbook",
+        "build_empire": "Construisez Votre Empire",
+        "contact_sales": "Contacter les Ventes"
+    },
+    "footer": {
+        "tagline": "La Référence Solide en Infrastructure Digitale pour l'Entreprise Fitness Globale.",
+        "platform": "La Plateforme",
+        "corporate": "Corporate",
+        "legal": "Mentions Légales",
+        "the_floor": "Le Sol",
+        "wall_of_fame": "Wall of Fame",
+        "playbook": "Le Playbook",
+        "founders": "Fondateurs",
+        "join_crew": "Rejoignez l'Équipe",
+        "privacy": "Coffre-Fort Confidentialité",
+        "contract": "Le Contrat",
+        "audit_logs": "Logs d'Audit",
+        "copyright": "© {{year}} FitNexa Systems Inc. Performance Garantie."
+    }
+}

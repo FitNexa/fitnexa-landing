@@ -2,8 +2,10 @@ import { motion } from 'framer-motion';
 import { Menu, X, Dumbbell } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export const Nav = () => {
+    const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
 
@@ -23,15 +25,15 @@ export const Nav = () => {
                     <div className="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center">
                         <Dumbbell className="text-white w-6 h-6" />
                     </div>
-                    <span className="text-xl font-bold tracking-tight text-slate-900 uppercase">FitNexa <span className="text-blue-600 font-black">Elite</span></span>
+                    <span className="text-xl font-bold tracking-tight text-slate-900 uppercase">{t('nav.brand')} <span className="text-blue-600 font-black">{t('nav.brand_elite')}</span></span>
                 </Link>
 
                 <div className="hidden md:flex items-center space-x-10">
-                    <Link to="/" onClick={() => scrollToSection('benefits')} className="text-xs font-bold text-slate-500 hover:text-slate-900 transition-colors uppercase tracking-[0.2em]">The Floor</Link>
-                    <Link to="/wall-of-fame" className="text-xs font-bold text-slate-500 hover:text-slate-900 transition-colors uppercase tracking-[0.2em]">Wall of Fame</Link>
-                    <Link to="/playbook" className="text-xs font-bold text-slate-500 hover:text-slate-900 transition-colors uppercase tracking-[0.2em]">The Playbook</Link>
+                    <Link to="/" onClick={() => scrollToSection('benefits')} className="text-xs font-bold text-slate-500 hover:text-slate-900 transition-colors uppercase tracking-[0.2em]">{t('nav.the_floor')}</Link>
+                    <Link to="/wall-of-fame" className="text-xs font-bold text-slate-500 hover:text-slate-900 transition-colors uppercase tracking-[0.2em]">{t('nav.wall_of_fame')}</Link>
+                    <Link to="/playbook" className="text-xs font-bold text-slate-500 hover:text-slate-900 transition-colors uppercase tracking-[0.2em]">{t('nav.playbook')}</Link>
                     <a href={import.meta.env.VITE_ONBOARDING_URL || 'https://onboarding.uat.gymia.fit'} className="bg-slate-950 text-white px-8 py-2.5 rounded font-black text-[10px] uppercase tracking-[0.2em] hover:bg-slate-800 transition-all border border-slate-800">
-                        Build Your Empire
+                        {t('nav.build_empire')}
                     </a>
                 </div>
 
@@ -46,9 +48,9 @@ export const Nav = () => {
                     animate={{ opacity: 1, y: 0 }}
                     className="md:hidden bg-white border-b border-slate-200 p-6 space-y-4 shadow-xl"
                 >
-                    <Link to="/" onClick={() => { setIsOpen(false); scrollToSection('benefits'); }} className="block text-sm font-bold text-slate-900 uppercase tracking-widest">The Floor</Link>
-                    <Link to="/wall-of-fame" onClick={() => setIsOpen(false)} className="block text-sm font-bold text-slate-900 uppercase tracking-widest">Wall of Fame</Link>
-                    <button className="w-full bg-slate-900 text-white py-4 rounded font-black uppercase text-[10px] tracking-widest">Contact Sales</button>
+                    <Link to="/" onClick={() => { setIsOpen(false); scrollToSection('benefits'); }} className="block text-sm font-bold text-slate-900 uppercase tracking-widest">{t('nav.the_floor')}</Link>
+                    <Link to="/wall-of-fame" onClick={() => setIsOpen(false)} className="block text-sm font-bold text-slate-900 uppercase tracking-widest">{t('nav.wall_of_fame')}</Link>
+                    <button type="button" className="w-full bg-slate-900 text-white py-4 rounded font-black uppercase text-[10px] tracking-widest">{t('nav.contact_sales')}</button>
                 </motion.div>
             )}
         </nav>

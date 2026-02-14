@@ -1,0 +1,98 @@
+{
+    "hero": {
+        "badge": "Operazioni Solide 2026",
+        "title_line1": "Forza",
+        "title_line2": "nei Dati.",
+        "description": "Trasforma il tuo spazio fisico in un impero digitale ad alte prestazioni. Il tuo brand, i tuoi membri, la tua forza—professionalizzati con l'infrastruttura digitale d'élite di FitNexa.",
+        "cta_primary": "Inizia la Costruzione",
+        "cta_secondary": "I Progetti"
+    },
+    "hero_cards": {
+        "active_memberships": "Abbonamenti Attivi",
+        "peak_performance": "Prestazioni di Picco",
+        "sync_active": "Sincronizzazione Attiva",
+        "growth": "Crescita",
+        "retention": "Fidelizzazione"
+    },
+    "brand_preview": {
+        "section_label": "Motore di Trasformazione",
+        "title_line1": "Il Tuo Brand.",
+        "title_line2": "La Nostra Potenza.",
+        "description": "Il motore \"Camaleonte\" di FitNexa si adatta istantaneamente alla tua identità.",
+        "gym_name_label": "Denominazione Struttura",
+        "gym_name_placeholder": "Inserisci Nome Palestra...",
+        "color_label": "DNA Colore Brand",
+        "live_sync": "Sincronizzazione Live Attiva",
+        "cta": "Inizia a Costruire la Tua App"
+    },
+    "brand_preview_preview": {
+        "member_status": "Stato Membro",
+        "elite_tier": "Livello Elite",
+        "points": "Punti",
+        "steps": "Passi",
+        "time": "Tempo",
+        "recommended_training": "Allenamento Consigliato",
+        "performance_dashboard": "Dashboard Prestazioni",
+        "operations_hub": "Centro Operativo",
+        "export_analytics": "Esporta Analisi",
+        "metrics": "Metriche L{{num}}",
+        "retention_curve": "Curva Fidelizzazione Globale"
+    },
+    "benefits": {
+        "title_line1": "Strutture d'Elite",
+        "title_line2": "Richiedono Soluzioni Moderne.",
+        "description": "Abbandona i fogli di calcolo obsoleti. FitNexa fornisce le fondamenta solide di cui ha bisogno la tua palestra.",
+        "branded_core_title": "Il Nucleo Brandizzato",
+        "branded_core_desc": "Il tuo logo, i tuoi colori, le tue regole. Lancia un'app membri personalizzata.",
+        "automated_title": "Muscolo Automatizzato",
+        "automated_desc": "Basta con il lavoro amministrativo meccanico. Automatizza fatturazione e tracciamento.",
+        "community_title": "Oro della Community",
+        "community_desc": "Trasforma i lupi solitari nei tuoi più fedeli sostenitori."
+    },
+    "stories": {
+        "title_line1": "Prova di",
+        "title_line2": "Dominio.",
+        "description": "Scopri come le strutture di alto livello usano FitNexa per dominare la concorrenza.",
+        "view_playbook": "Vedi Playbook",
+        "view_wall": "Vedi Wall of Fame",
+        "irontemple": "Iron Temple",
+        "irontemple_quote": "Non siamo solo sopravvissuti all'invasione dei big box. Li abbiamo schiacciati.",
+        "greentheory": "Green Theory",
+        "greentheory_quote": "L'alta intensità batte l'alto volume. Lo abbiamo dimostrato con i dati."
+    },
+    "blog": {
+        "section_label": "Il Playbook",
+        "title_line1": "Approfondimenti",
+        "title_line2": "Solidi.",
+        "description": "Strategie esperte per fondatori di palestre che mirano a scalare.",
+        "search_placeholder": "Cerca negli archivi...",
+        "read_more": "Leggi di più",
+        "no_results_title": "Nessun archivio trovato",
+        "no_results_desc": "Prova a cercare con parole diverse.",
+        "category_all": "Tutti"
+    },
+    "nav": {
+        "brand": "FitNexa",
+        "brand_elite": "Elite",
+        "the_floor": "Il Pavimento",
+        "wall_of_fame": "Wall of Fame",
+        "playbook": "Il Playbook",
+        "build_empire": "Costruisci il Tuo Impero",
+        "contact_sales": "Contatta Vendite"
+    },
+    "footer": {
+        "tagline": "Lo Standard Solido nell'Infrastruttura Digitale per le Imprese Fitness Globali.",
+        "platform": "La Piattaforma",
+        "corporate": "Corporate",
+        "legal": "Legale e Termini",
+        "the_floor": "Il Pavimento",
+        "wall_of_fame": "Wall of Fame",
+        "playbook": "Il Playbook",
+        "founders": "Fondatori",
+        "join_crew": "Unisciti al Team",
+        "privacy": "Vault Privacy",
+        "contract": "Il Contratto",
+        "audit_logs": "Log di Audit",
+        "copyright": "© {{year}} FitNexa Systems Inc. Prestazioni Garantite."
+    }
+}
