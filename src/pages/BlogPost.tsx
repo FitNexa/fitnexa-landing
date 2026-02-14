@@ -25,6 +25,16 @@ const BlogPost = () => {
                         <ArrowLeft className="mr-3 w-4 h-4" /> Back to Archives
                     </Link>
 
+                    {blog.imageUrl && (
+                        <div className="mb-16 rounded-[48px] overflow-hidden aspect-[21/9] shadow-2xl border-4 border-white">
+                            <img
+                                src={blog.imageUrl}
+                                alt={blog.title}
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                    )}
+
                     <div className="space-y-10">
                         <div className="flex items-center space-x-6">
                             <div className="w-16 h-16 bg-slate-950 rounded-2xl flex items-center justify-center text-white shadow-2xl">

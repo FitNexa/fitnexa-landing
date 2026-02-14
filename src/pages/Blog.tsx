@@ -73,6 +73,16 @@ const Blog = () => {
                                 transition={{ delay: i * 0.1 }}
                                 className="group flex flex-col bg-white rounded-[40px] border border-slate-100 overflow-hidden hover:shadow-2xl transition-all h-full"
                             >
+                                {blog.imageUrl && (
+                                    <div className="relative h-64 overflow-hidden">
+                                        <img
+                                            src={blog.imageUrl}
+                                            alt={blog.title}
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                    </div>
+                                )}
                                 <div className="p-10 flex-1 flex flex-col space-y-6">
                                     <div className="flex justify-between items-start">
                                         <div className="w-14 h-14 bg-slate-950 rounded-2xl flex items-center justify-center text-white shadow-xl group-hover:rotate-6 transition-transform">
