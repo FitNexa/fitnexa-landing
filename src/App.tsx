@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import Experience from './pages/Experience';
 import GrowthPlaybook from './pages/GrowthPlaybook';
 import WallOfFame from './pages/WallOfFame';
 import { Nav } from './components/Nav';
@@ -28,6 +29,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
+          <Route path="/experience" element={<Experience />} />
           <Route path="/playbook/:gymId" element={<GrowthPlaybook />} />
           <Route path="/playbook" element={<Blog />} />
           <Route path="/wall-of-fame" element={<WallOfFame />} />

@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Trophy } from 'lucide-react';
-import { GYM_THEMES } from '../data/gymThemes';
+import { useGymThemes } from '../data/gymThemes';
 
 const WallOfFame = () => {
+    const themes = useGymThemes();
+
     return (
         <div className="bg-slate-950 min-h-screen pt-32 pb-20">
             <div className="max-w-7xl mx-auto px-6">
@@ -34,7 +36,7 @@ const WallOfFame = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {Object.values(GYM_THEMES).map((theme, i) => (
+                    {Object.values(themes).map((theme, i) => (
                         <motion.div
                             key={theme.id}
                             initial={{ opacity: 0, y: 30 }}

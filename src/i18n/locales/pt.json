@@ -1,0 +1,44 @@
+{
+    "hero": {
+        "badge": "Operações Blindadas 2026",
+        "title_highlight": "Gerencie sua Academia",
+        "title_main": "Como uma Grande Empresa.",
+        "subtitle": "Pare de perder 30% da sua receita com administração manual e falhas de pagamento. O FitNexa automatiza suas operações, controla o acesso 24/7 e escala sua marca.",
+        "cta_start": "Agendar Demo Agora",
+        "cta_demo": "Ver Demo (2 Min)"
+    },
+    "value_prop": {
+        "ghost_title": "Membros Fantasma",
+        "ghost_desc": "15% da sua base ativa parou de vir, e você nem sabe quem são.",
+        "payments_title": "Pagamentos Falhos",
+        "payments_desc": "Seu 'pagamento automático' não é automático se você tem que perseguir cartões recusados manualmente.",
+        "staff_title": "Gargalos de Equipe",
+        "staff_desc": "Seus melhores treinadores perdem horas faturáveis na recepção fazendo check-ins.",
+        "brand_title": "Diluição da Marca",
+        "brand_desc": "Você construiu uma academia premium, mas seus membros usam um app genérico que parece de 2010."
+    },
+    "features": {
+        "title": "O Sistema Operacional para Instalações Físicas",
+        "subtitle": "Nós não apenas gerenciamos membros. Digitalizamos todo o seu chão de fábrica.",
+        "members_title": "O App Camaleão White-Label",
+        "members_desc": "App móvel iOS/Android totalmente com sua marca. Seu logo. Suas cores.",
+        "members_benefit_1": "Credibilidade instantânea.",
+        "members_benefit_2": "Percebida como marca premium.",
+        "members_benefit_3": "Pare de enviar seus membros para agregadores.",
+        "billing_title": "Receita no Piloto Automático",
+        "billing_desc": "O sistema lida com assinaturas e cobranças falhas automaticamente.",
+        "billing_benefit_1": "Arrecade 100% da receita devida.",
+        "billing_benefit_2": "Revogação de acesso instantânea em caso de falha.",
+        "billing_benefit_3": "Sem conversas estranhas na recepção.",
+        "access_title": "Controle de Acesso Blindado",
+        "access_desc": "Códigos QR dinâmicos e integração com catracas 24/7.",
+        "access_benefit_1": "0% de fraude.",
+        "access_benefit_2": "Estenda horários para 24/7.",
+        "access_benefit_3": "Sem necessidade de equipe noturna.",
+        "marketing_title": "Centro de Comando Multi-Unidade",
+        "marketing_desc": "Gerencie 1 ou 100 academias com um único login.",
+        "marketing_benefit_1": "Escalabilidade sem atrito.",
+        "marketing_benefit_2": "Abra a próxima unidade em cliques.",
+        "marketing_benefit_3": "Relatórios globais unificados."
+    }
+}

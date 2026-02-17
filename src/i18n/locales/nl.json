@@ -1,0 +1,44 @@
+{
+    "hero": {
+        "badge": "Gepantserde Operaties 2026",
+        "title_highlight": "Run Je Sportschool",
+        "title_main": "Als een Multinational.",
+        "subtitle": "Stop met het verliezen van 30% omzet aan handmatige administratie. FitNexa automatiseert je operatie, regelt 24/7 toegang en laat je merk groeien.",
+        "cta_start": "Vraag een Demo Aan",
+        "cta_demo": "Bekijk Demo (2 Min)"
+    },
+    "value_prop": {
+        "ghost_title": "Spookleden",
+        "ghost_desc": "15% van je actieve ledenbestand komt niet meer, en je weet niet eens wie het zijn.",
+        "payments_title": "Mislukte Betalingen",
+        "payments_desc": "Je 'automatische incasso' is niet automatisch als je geweigerde kaarten handmatig moet najagen.",
+        "staff_title": "Personeelsknelpunten",
+        "staff_desc": "Je beste trainers verspillen declarabele uren aan de balie met inchecken.",
+        "brand_title": "Merkverwatering",
+        "brand_desc": "Je hebt een premium faciliteit gebouwd, maar je leden gebruiken een generieke app die eruitziet als 2010."
+    },
+    "features": {
+        "title": "Het Besturingssysteem voor Fysieke Locaties",
+        "subtitle": "We beheren niet alleen leden. We digitaliseren je hele operationele vloer.",
+        "members_title": "De 'Kameleon' White-Label App",
+        "members_desc": "Volledig gebrandmerkte iOS/Android mobiele app. Jouw logo. Jouw kleuren.",
+        "members_benefit_1": "Directe geloofwaardigheid.",
+        "members_benefit_2": "Ervaren als premium merk.",
+        "members_benefit_3": "Stop met het sturen van leden naar aggregators.",
+        "billing_title": "Omzet op Autopiloot",
+        "billing_desc": "Systeem verwerkt abonnementen en mislukte betalingen automatisch.",
+        "billing_benefit_1": "Incasseer 100% van de verschuldigde omzet.",
+        "billing_benefit_2": "Directe toegangsintrekking bij mislukking.",
+        "billing_benefit_3": "Geen ongemakkelijke gesprekken aan de balie.",
+        "access_title": "Ijzersterke Toegangscontrole",
+        "access_desc": "Dynamische QR-codes & 24/7 toegangspoort integratie.",
+        "access_benefit_1": "0% Fraude.",
+        "access_benefit_2": "Verleng openingstijden naar 24/7.",
+        "access_benefit_3": "Geen nachtpersoneel nodig.",
+        "marketing_title": "Multi-Locatie Commandocentrum",
+        "marketing_desc": "Beheer 1 of 100 sportscholen vanuit één login.",
+        "marketing_benefit_1": "Schaal zonder wrijving.",
+        "marketing_benefit_2": "Open de volgende locatie in klikken.",
+        "marketing_benefit_3": "Uniforme wereldwijde rapportage."
+    }
+}

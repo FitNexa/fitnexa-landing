@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import {
     ArrowLeft, TrendingUp, Users,
@@ -8,10 +9,34 @@ import {
     ArrowRight, Award, Timer,
     Star, ChevronRight
 } from 'lucide-react';
-import { getGymTheme, GYM_THEMES } from '../data/gymThemes';
+import { useGymTheme, useGymThemes } from '../data/gymThemes';
 
 const GrowthPlaybook = () => {
     const { gymId } = useParams();
+    const { t } = useTranslation();
+    const themes = useGymThemes();
+    // Always call hooks at top level
+    const theme = useGymTheme(gymId);
+
+    useEffect(() => {
+        // Only apply theme styles if we are in a specific playbook view
+        if (!gymId) return;
+
+        const root = document.documentElement;
+        root.style.setProperty('--brand-primary', theme.colors.primary);
+        root.style.setProperty('--brand-secondary', theme.colors.secondary);
+        root.style.setProperty('--brand-accent', theme.colors.accent);
+        root.style.setProperty('--brand-background', theme.colors.background);
+        root.style.setProperty('--brand-surface', theme.colors.surface);
+
+        return () => {
+            root.style.removeProperty('--brand-primary');
+            root.style.removeProperty('--brand-secondary');
+            root.style.removeProperty('--brand-accent');
+            root.style.removeProperty('--brand-background');
+            root.style.removeProperty('--brand-surface');
+        };
+    }, [theme, gymId]);
 
     const getIcon = (type: string) => {
         switch (type) {
@@ -39,7 +64,7 @@ const GrowthPlaybook = () => {
                             animate={{ opacity: 1, y: 0 }}
                             className="text-blue-500 font-black uppercase tracking-[0.4em] text-[10px]"
                         >
-                            The Nexus of Growth
+                            {t('growth_playbook.nexus_of_growth')}
                         </motion.span>
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
@@ -47,7 +72,7 @@ const GrowthPlaybook = () => {
                             transition={{ delay: 0.1 }}
                             className="text-5xl md:text-7xl font-black text-white leading-none tracking-tighter"
                         >
-                            Choose Your <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Experience.</span>
+                            {t('growth_playbook.choose_experience_title_line1')} <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">{t('growth_playbook.choose_experience_title_line2')}</span>
                         </motion.h1>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -55,12 +80,12 @@ const GrowthPlaybook = () => {
                             transition={{ delay: 0.2 }}
                             className="text-lg text-slate-400 font-bold"
                         >
-                            Select a brand archetype to see the FitNexa Growth Playbook through their unique lens.
+                            {t('growth_playbook.choose_experience_desc')}
                         </motion.p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {Object.values(GYM_THEMES).map((theme, i) => (
+                        {Object.values(themes).map((theme, i) => (
                             <motion.div
                                 key={theme.id}
                                 initial={{ opacity: 0, scale: 0.9 }}
@@ -87,14 +112,14 @@ const GrowthPlaybook = () => {
                                                     <Zap className="w-8 h-8 fill-current" />
                                                 </div>
                                                 <div className="text-right">
-                                                    <p className="text-[10px] font-black uppercase tracking-widest text-slate-500">Playbook Tier</p>
-                                                    <p className="text-xl font-black text-white">L{i + 1} Elite</p>
+                                                    <p className="text-[10px] font-black uppercase tracking-widest text-slate-500">{t('growth_playbook.playbook_tier')}</p>
+                                                    <p className="text-xl font-black text-white">{t('growth_playbook.elite_tier_level', { level: i + 1 })}</p>
                                                 </div>
                                             </div>
 
                                             <div>
                                                 <h3 className="text-4xl font-black text-white mb-2 leading-none tracking-tighter">{theme.name}</h3>
-                                                <p className="text-slate-400 font-bold">Immersive Experience</p>
+                                                <p className="text-slate-400 font-bold">{t('growth_playbook.immersive_experience')}</p>
                                             </div>
 
                                             <div className="flex items-center justify-between pt-8 border-t border-white/5">
@@ -103,7 +128,7 @@ const GrowthPlaybook = () => {
                                                     <div className="w-3 h-3 rounded-full" style={{ backgroundColor: theme.colors.accent }} />
                                                 </div>
                                                 <div className="flex items-center gap-2 text-white font-black uppercase text-[10px] tracking-widest group-hover:gap-4 transition-all">
-                                                    Open Blueprint <ChevronRight className="w-4 h-4" />
+                                                    {t('growth_playbook.open_blueprint')} <ChevronRight className="w-4 h-4" />
                                                 </div>
                                             </div>
                                         </div>
@@ -116,25 +141,6 @@ const GrowthPlaybook = () => {
             </div>
         );
     }
-
-    const theme = getGymTheme(gymId);
-
-    useEffect(() => {
-        const root = document.documentElement;
-        root.style.setProperty('--brand-primary', theme.colors.primary);
-        root.style.setProperty('--brand-secondary', theme.colors.secondary);
-        root.style.setProperty('--brand-accent', theme.colors.accent);
-        root.style.setProperty('--brand-background', theme.colors.background);
-        root.style.setProperty('--brand-surface', theme.colors.surface);
-
-        return () => {
-            root.style.removeProperty('--brand-primary');
-            root.style.removeProperty('--brand-secondary');
-            root.style.removeProperty('--brand-accent');
-            root.style.removeProperty('--brand-background');
-            root.style.removeProperty('--brand-surface');
-        };
-    }, [theme]);
 
     // Use theme story metrics
     const playbookItems = theme.story ? theme.story.metrics : [];
@@ -152,20 +158,20 @@ const GrowthPlaybook = () => {
                         className="max-w-4xl"
                     >
                         <Link to="/playbook" className="inline-flex items-center text-[10px] font-black uppercase tracking-[0.4em] mb-12 opacity-40 hover:opacity-100 transition-opacity" style={{ color: theme.colors.secondary }}>
-                            <ArrowLeft className="mr-3 w-4 h-4" /> Switch Experience
+                            <ArrowLeft className="mr-3 w-4 h-4" /> {t('growth_playbook.switch_experience')}
                         </Link>
 
                         <div className="inline-flex items-center space-x-3 px-4 py-2 rounded-full mb-10 border-2" style={{ borderColor: theme.colors.primary, color: theme.colors.primary }}>
                             <Zap className="w-4 h-4 fill-current" />
-                            <span className="text-[10px] font-black uppercase tracking-widest">{theme.name} Edition</span>
+                            <span className="text-[10px] font-black uppercase tracking-widest">{theme.name} {t('growth_playbook.edition')}</span>
                         </div>
 
                         <h1 className="text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter mb-12" style={{ color: theme.colors.secondary }}>
-                            The Growth <br /> <span className="text-brand-gradient">Playbook.</span>
+                            {t('growth_playbook.title_line1')} <br /> <span className="text-brand-gradient">{t('growth_playbook.title_line2')}</span>
                         </h1>
 
                         <p className="text-2xl font-bold leading-relaxed max-w-2xl border-l-8 pl-10" style={{ borderColor: theme.colors.primary, color: theme.colors.secondary + 'CC' }}>
-                            Your facility is more than four walls. It's a high-performance engine waiting for the right digital fuel.
+                            {t('growth_playbook.description')}
                         </p>
                     </motion.div>
                 </div>
@@ -203,9 +209,9 @@ const GrowthPlaybook = () => {
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
                     <div className="flex flex-col lg:flex-row gap-24 items-center">
                         <div className="flex-1 space-y-12">
-                            <span className="font-black uppercase tracking-[0.4em] text-[10px]" style={{ color: theme.colors.primary }}>The Transformation</span>
+                            <span className="font-black uppercase tracking-[0.4em] text-[10px]" style={{ color: theme.colors.primary }}>{t('growth_playbook.transformation')}</span>
                             <h2 className="text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter">
-                                From Chaos <br /> to <span style={{ color: theme.colors.primary }}>Empire.</span>
+                                {t('growth_playbook.chaos_to_empire_line1')} <br /> {t('growth_playbook.chaos_to_empire_line2')} <span style={{ color: theme.colors.primary }}>{t('growth_playbook.chaos_to_empire_line3')}</span>
                             </h2>
                             <p className="text-xl text-slate-400 font-bold leading-relaxed italic border-l-4 pl-8" style={{ borderColor: theme.colors.primary }}>
                                 "{theme.story?.challenge}"
@@ -217,7 +223,7 @@ const GrowthPlaybook = () => {
                                         <Rocket className="w-6 h-6" style={{ color: theme.colors.primary }} />
                                     </div>
                                     <div>
-                                        <h4 className="font-black text-lg mb-2">The Solution</h4>
+                                        <h4 className="font-black text-lg mb-2">{t('growth_playbook.the_solution')}</h4>
                                         <p className="text-slate-500 font-bold">{theme.story?.solution}</p>
                                     </div>
                                 </div>
@@ -226,7 +232,7 @@ const GrowthPlaybook = () => {
                                         <Shield className="w-6 h-6" style={{ color: theme.colors.primary }} />
                                     </div>
                                     <div>
-                                        <h4 className="font-black text-lg mb-2">The Result</h4>
+                                        <h4 className="font-black text-lg mb-2">{t('growth_playbook.the_result')}</h4>
                                         <p className="text-slate-500 font-bold">{theme.story?.result}</p>
                                     </div>
                                 </div>

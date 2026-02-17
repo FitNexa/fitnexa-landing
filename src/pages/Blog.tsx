@@ -3,10 +3,11 @@ import { Search, ArrowRight, Clock } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { blogs } from '../data/blogs';
+import { useBlogs } from '../data/blogs';
 
 const Blog = () => {
     const { t } = useTranslation();
+    const blogs = useBlogs();
     const [searchQuery, setSearchQuery] = useState('');
     const [activeCategory, setActiveCategory] = useState('All');
 

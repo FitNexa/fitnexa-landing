@@ -1,9 +1,10 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Clock, User, Star, Quote } from 'lucide-react';
-import { blogs } from '../data/blogs';
+import { useBlogs } from '../data/blogs';
 
 const BlogPost = () => {
     const { id } = useParams();
+    const blogs = useBlogs();
     const blog = blogs.find(b => b.id === id);
 
     if (!blog) {

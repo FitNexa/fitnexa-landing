@@ -1,0 +1,44 @@
+{
+    "hero": {
+        "badge": "Gepanzerte Operationen 2026",
+        "title_highlight": "Führen Sie Ihr Studio",
+        "title_main": "Wie eine AG.",
+        "subtitle": "Verlieren Sie keine 30% Ihres Umsatzes mehr durch manuelle Verwaltung. FitNexa automatisiert Ihren Betrieb, ermöglicht 24/7-Zugang und stärkt Ihre Marke.",
+        "cta_start": "Demo Anfordern",
+        "cta_demo": "Demo Ansehen (2 Min)"
+    },
+    "value_prop": {
+        "ghost_title": "Geister-Mitglieder",
+        "ghost_desc": "15% Ihrer aktiven Basis kommen nicht mehr, und Sie wissen nicht einmal, wer sie sind.",
+        "payments_title": "Fehlgeschlagene Zahlungen",
+        "payments_desc": "Ihre 'automatische Zahlung' ist nicht automatisch, wenn Sie abgelehnten Karten manuell hinterherlaufen müssen.",
+        "staff_title": "Personal-Engpässe",
+        "staff_desc": "Ihre besten Trainer verschwenden abrechenbare Stunden am Empfang mit Check-ins.",
+        "brand_title": "Markenverwässerung",
+        "brand_desc": "Sie haben eine Premium-Anlage gebaut, aber Ihre Mitglieder nutzen eine generische App, die wie 2010 aussieht."
+    },
+    "features": {
+        "title": "Das Betriebssystem für Physische Anlagen",
+        "subtitle": "Wir verwalten nicht nur Mitglieder. Wir digitalisieren Ihre gesamte Fläche.",
+        "members_title": "Die 'Chamäleon' White-Label App",
+        "members_desc": "Vollständig gebrandete iOS/Android Mobile App. Ihr Logo. Ihre Farben.",
+        "members_benefit_1": "Sofortige Glaubwürdigkeit.",
+        "members_benefit_2": "Wahrgenommen als Premium-Marke.",
+        "members_benefit_3": "Hören Sie auf, Mitglieder zu Aggregatoren zu schicken.",
+        "billing_title": "Umsatz-Autopilot",
+        "billing_desc": "Das System wickelt Abos und Mahnungen bei Zahlungsausfall automatisch ab.",
+        "billing_benefit_1": "Sammeln Sie 100% der geschuldeten Einnahmen ein.",
+        "billing_benefit_2": "Sofortiger Zugangswiderruf bei Ausfall.",
+        "billing_benefit_3": "Keine unangenehmen Gespräche am Empfang.",
+        "access_title": "Eiserne Zugangskontrolle",
+        "access_desc": "Dynamische QR-Codes & 24/7 Drehkreuz-Integration.",
+        "access_benefit_1": "0% Betrug.",
+        "access_benefit_2": "Erweitern Sie Öffnungszeiten auf 24/7.",
+        "access_benefit_3": "Kein Nachtpersonal erforderlich.",
+        "marketing_title": "Multi-Standort Kommandozentrale",
+        "marketing_desc": "Verwalten Sie 1 oder 100 Studios mit einem Login.",
+        "marketing_benefit_1": "Skalieren Sie ohne Reibung.",
+        "marketing_benefit_2": "Eröffnen Sie den nächsten Standort mit Klicks.",
+        "marketing_benefit_3": "Einheitliches globales Reporting."
+    }
+}

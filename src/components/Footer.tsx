@@ -1,58 +1,69 @@
-import { Dumbbell, Globe, Activity } from 'lucide-react';
+import { Dumbbell, Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 export const Footer = () => {
     const { t } = useTranslation();
-    return (
-    <footer className="py-24 bg-white border-t border-slate-100">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-20">
-            <div className="space-y-8">
-                <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-slate-950 rounded-xl flex items-center justify-center">
-                        <Dumbbell className="text-white w-6 h-6" />
-                    </div>
-                    <span className="text-xl font-black text-slate-900 uppercase tracking-tighter">{t('nav.brand')} <span className="text-blue-600">{t('nav.brand_elite')}</span></span>
-                </div>
-                <p className="text-sm font-bold text-slate-400 max-w-xs leading-loose uppercase tracking-widest text-[10px]">
-                    {t('footer.tagline')}
-                </p>
-                <div className="flex space-x-6 text-slate-300">
-                    <Globe className="w-6 h-6 hover:text-blue-600 transition-colors cursor-pointer" />
-                    <Activity className="w-6 h-6 hover:text-blue-600 transition-colors cursor-pointer" />
-                </div>
-            </div>
+    const currentYear = new Date().getFullYear();
 
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-24">
-                <div className="space-y-6">
-                    <p className="text-[10px] font-black text-slate-950 uppercase tracking-[0.3em]">{t('footer.platform')}</p>
-                    <ul className="text-sm font-bold text-slate-400 space-y-3">
-                        <li><Link to="/" className="hover:text-blue-600 transition-all">{t('footer.the_floor')}</Link></li>
-                        <li><Link to="/" className="hover:text-blue-600 transition-all">{t('footer.wall_of_fame')}</Link></li>
-                        <li><Link to="/blog" className="hover:text-blue-600 transition-all">{t('footer.playbook')}</Link></li>
-                    </ul>
+    return (
+        <footer className="bg-[#0B1120] text-slate-400 py-16 lg:py-20 border-t border-slate-800/50">
+            <div className="container-padding">
+                <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mb-16">
+                    <div className="space-y-6 max-w-sm">
+                        <Link to="/" className="flex items-center gap-3 text-white group">
+                            <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-900/20 group-hover:scale-105 transition-transform duration-300">
+                                <Dumbbell className="text-white w-6 h-6" />
+                            </div>
+                            <span className="text-2xl font-bold tracking-tight">{t('nav.brand')}</span>
+                        </Link>
+                        <p className="text-slate-400 leading-relaxed text-sm lg:text-base">
+                            The all-in-one operating system for modern gyms. Automate operations, increase revenue, and deliver a world-class member experience.
+                        </p>
+                        <div className="flex space-x-3">
+                            {[Instagram, Facebook, Twitter, Linkedin].map((Icon, i) => (
+                                <a key={i} href="#" className="w-10 h-10 rounded-xl bg-slate-800/50 border border-slate-700/50 flex items-center justify-center hover:bg-blue-600 hover:border-blue-500 hover:text-white transition-all duration-300 hover:-translate-y-1">
+                                    <Icon className="w-5 h-5" />
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-12 lg:gap-24">
+                        <div>
+                            <h4 className="text-white font-bold mb-6 tracking-wide text-sm uppercase">{t('footer.platform')}</h4>
+                            <ul className="space-y-3 text-sm">
+                                <li><Link to="/" className="hover:text-blue-500 transition-colors">{t('nav.features')}</Link></li>
+                                <li><Link to="/" className="hover:text-blue-500 transition-colors">{t('nav.pricing')}</Link></li>
+                                <li><a href={import.meta.env.VITE_ONBOARDING_URL || 'https://onboarding.uat.gymia.fit'} className="hover:text-blue-500 transition-colors">{t('nav.login')}</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 className="text-white font-bold mb-6 tracking-wide text-sm uppercase">{t('footer.corporate')}</h4>
+                            <ul className="space-y-3 text-sm">
+                                <li><Link to="/playbook" className="hover:text-blue-500 transition-colors">{t('nav.playbook')}</Link></li>
+                                <li><Link to="/about" className="hover:text-blue-500 transition-colors">About Us</Link></li>
+                                <li><Link to="/contact" className="hover:text-blue-500 transition-colors">Contact</Link></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 className="text-white font-bold mb-6 tracking-wide text-sm uppercase">{t('footer.legal')}</h4>
+                            <ul className="space-y-3 text-sm">
+                                <li><Link to="/privacy" className="hover:text-blue-500 transition-colors">{t('footer.privacy')}</Link></li>
+                                <li><Link to="/terms" className="hover:text-blue-500 transition-colors">{t('footer.terms')}</Link></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div className="space-y-6">
-                    <p className="text-[10px] font-black text-slate-900 uppercase tracking-[0.3em]">{t('footer.corporate')}</p>
-                    <ul className="text-sm font-bold text-slate-400 space-y-3">
-                        <li><Link to="/about" className="hover:text-blue-600 transition-all">{t('footer.founders')}</Link></li>
-                        <li><Link to="/blog" className="hover:text-blue-600 transition-all">{t('footer.playbook')}</Link></li>
-                        <li><Link to="/careers" className="hover:text-blue-600 transition-all">{t('footer.join_crew')}</Link></li>
-                    </ul>
-                </div>
-                <div className="space-y-6 hidden lg:block">
-                    <p className="text-[10px] font-black text-slate-950 uppercase tracking-[0.3em]">{t('footer.legal')}</p>
-                    <ul className="text-sm font-bold text-slate-400 space-y-3">
-                        <li><Link to="/privacy" className="hover:text-blue-600 transition-all">{t('footer.privacy')}</Link></li>
-                        <li><Link to="/terms" className="hover:text-blue-600 transition-all">{t('footer.contract')}</Link></li>
-                        <li><Link to="/security" className="hover:text-blue-600 transition-all">{t('footer.audit_logs')}</Link></li>
-                    </ul>
+
+                <div className="pt-8 border-t border-slate-800/50 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+                    <p>{t('footer.copyright', { year: currentYear })}</p>
+                    <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+                        <span>All Systems Operational</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-6 pt-16 mt-16 border-t border-slate-50 text-center md:text-left">
-            <p className="text-[9px] font-black text-slate-300 uppercase tracking-[0.5em]">{t('footer.copyright', { year: new Date().getFullYear() })}</p>
-        </div>
-    </footer>
+        </footer>
     );
 };

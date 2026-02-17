@@ -1,287 +1,32 @@
-import { motion } from 'framer-motion';
-import {
-    Users, ArrowRight,
-    Dumbbell, Activity, Timer, Zap, Award
-} from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+
+import { Hero } from '../components/Hero';
 import { BrandPreview } from '../components/BrandPreview';
-
-const Hero = () => {
-    const { t } = useTranslation();
-    return (
-    <section className="relative pt-48 pb-32">
-        <div className="max-w-7xl mx-auto px-6">
-            <div className="flex flex-col lg:flex-row items-center gap-20">
-                <div className="flex-1 text-center lg:text-left">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        <div className="inline-flex items-center space-x-2 px-4 py-1.5 bg-slate-900 text-white rounded-full mb-10 overflow-hidden relative group">
-                            <div className="absolute inset-0 bg-blue-600 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500" />
-                            <span className="text-[10px] font-black uppercase tracking-[0.3em] relative z-10 flex items-center">
-                                <TrophyIcon className="w-3 h-3 mr-2" /> {t('hero.badge')}
-                            </span>
-                        </div>
-                        <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-slate-950 leading-[1] tracking-tighter mb-10">
-                            {t('hero.title_line1')} <span className="text-blue-600 block">{t('hero.title_line2')}</span>
-                        </h1>
-                        <p className="text-xl text-slate-600 font-bold leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-12 border-l-4 border-blue-600 pl-6">
-                            {t('hero.description')}
-                        </p>
-                        <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                            <a href={import.meta.env.VITE_ONBOARDING_URL || 'https://onboarding.uat.gymia.fit'} className="w-full sm:w-auto px-12 py-5 bg-blue-600 text-white rounded font-black text-xs uppercase tracking-[0.2em] hover:bg-blue-700 transition-all flex items-center justify-center group shadow-2xl shadow-blue-200">
-                                {t('hero.cta_primary')} <ArrowRight className="ml-3 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                            </a>
-                            <button className="w-full sm:w-auto px-12 py-5 bg-white text-slate-950 border-2 border-slate-950 rounded font-black text-xs uppercase tracking-[0.2em] hover:bg-slate-50 transition-all">
-                                {t('hero.cta_secondary')}
-                            </button>
-                        </div>
-                    </motion.div>
-                </div>
-
-                <motion.div
-                    className="flex-1 w-full max-w-2xl"
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8 }}
-                >
-                    <div className="bg-slate-950 p-6 rounded-[48px] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] border-4 border-slate-800">
-                        <div className="bg-white rounded-[32px] overflow-hidden p-10 flex flex-col gap-8 shadow-inner">
-                            <div className="flex justify-between items-center bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                                <div className="space-y-1">
-                                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">{t('hero_cards.active_memberships')}</p>
-                                    <p className="text-4xl font-black text-slate-950">14,842</p>
-                                </div>
-                                <div className="w-14 h-14 bg-slate-950 rounded-2xl flex items-center justify-center shadow-2xl rotate-3">
-                                    <Users className="text-white w-7 h-7" />
-                                </div>
-                            </div>
-                            <div className="relative group">
-                                <div className="h-48 w-full bg-slate-50 rounded-2xl border border-slate-100 p-6 flex flex-col justify-between overflow-hidden">
-                                    <div className="flex justify-between text-[10px] font-black text-slate-400 tracking-widest">
-                                        <span>L1</span><span>L2</span><span>L3</span><span>L4</span><span>L5</span><span>L6</span><span>L7</span>
-                                    </div>
-                                    <div className="flex items-end gap-3 h-28 relative z-10">
-                                        {[40, 60, 45, 90, 65, 30, 50].map((h, i) => (
-                                            <div key={i} className="flex-1 bg-blue-600/10 rounded group-hover:bg-blue-600/30 transition-all" style={{ height: `${h}%` }} />
-                                        ))}
-                                        <div className="absolute top-0 right-[28%] w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center shadow-lg animate-bounce">
-                                            <Activity className="text-white w-4 h-4" />
-                                        </div>
-                                    </div>
-                                    <div className="mt-4 flex justify-between items-center text-[10px] font-black uppercase text-slate-400 tracking-tighter">
-                                        <span className="flex items-center"><Timer className="w-3 h-3 mr-1" /> {t('hero_cards.peak_performance')}</span>
-                                        <span className="text-blue-600">{t('hero_cards.sync_active')}</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-2 gap-6">
-                                <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-4">
-                                    <Dumbbell className="text-blue-600 w-8 h-8" />
-                                    <div>
-                                        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest text-[8px]">{t('hero_cards.growth')}</p>
-                                        <p className="text-2xl font-black text-slate-950 leading-none">+22%</p>
-                                    </div>
-                                </div>
-                                <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 flex items-center gap-4">
-                                    <TrophyIcon className="text-yellow-500 w-8 h-8" />
-                                    <div>
-                                        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest text-[8px]">{t('hero_cards.retention')}</p>
-                                        <p className="text-2xl font-black text-slate-950 leading-none">98.2%</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </motion.div>
-            </div>
-        </div>
-    </section>
-);
-};
-
-const TrophyIcon = ({ className }: { className?: string }) => (
-    <Award className={className} />
-);
-
-interface BenefitCardProps {
-    icon: React.ComponentType<{ className?: string }>;
-    title: string;
-    desc: string;
-}
-const BenefitCard = ({ icon: Icon, title, desc }: BenefitCardProps) => (
-    <div className="p-12 bg-white rounded-[40px] border border-slate-100 shadow-sm hover:shadow-2xl hover:border-blue-100 transition-all group relative overflow-hidden">
-        <div className="w-16 h-16 bg-slate-900 rounded-2xl flex items-center justify-center text-white mb-10 group-hover:rotate-6 transition-all shadow-xl shadow-slate-200">
-            <Icon className="w-8 h-8" />
-        </div>
-        <h3 className="text-2xl font-black text-slate-900 mb-4">{title}</h3>
-        <p className="text-slate-500 font-bold leading-relaxed">{desc}</p>
-        <div className="absolute -bottom-4 -right-4 opacity-[0.03] grayscale font-black text-9xl select-none group-hover:opacity-[0.05] transition-opacity">
-            <Icon className="w-full h-full" />
-        </div>
-    </div>
-);
-
-const BenefitsGrid = () => {
-    const { t } = useTranslation();
-    return (
-    <section id="benefits" className="py-40 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center max-w-3xl mx-auto mb-24 space-y-4">
-                <div className="w-px h-12 bg-blue-600 mx-auto" />
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-tight">{t('benefits.title_line1')} <br /> <span className="text-blue-600">{t('benefits.title_line2')}</span></h2>
-                <p className="text-xl text-slate-600 font-bold max-w-2xl mx-auto pt-6">{t('benefits.description')}</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <BenefitCard
-                    icon={Dumbbell}
-                    title={t('benefits.branded_core_title')}
-                    desc={t('benefits.branded_core_desc')}
-                />
-                <BenefitCard
-                    icon={Activity}
-                    title={t('benefits.automated_title')}
-                    desc={t('benefits.automated_desc')}
-                />
-                <BenefitCard
-                    icon={TrophyIcon}
-                    title={t('benefits.community_title')}
-                    desc={t('benefits.community_desc')}
-                />
-            </div>
-        </div>
-    </section>
-);
-};
-
-const StoriesSection = () => {
-    const { t } = useTranslation();
-    return (
-    <section id="stories" className="py-24 bg-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-            <div className="text-center mb-24">
-                <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tighter text-slate-900">
-                    {t('stories.title_line1')} <span className="text-blue-600">{t('stories.title_line2')}</span>
-                </h2>
-                <p className="text-xl text-slate-500 max-w-2xl mx-auto font-medium">
-                    {t('stories.description')}
-                </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                {/* Iron Temple */}
-                <Link to="/playbook/irontemple" className="group relative h-[500px] rounded-[48px] overflow-hidden cursor-pointer">
-                    <div className="absolute inset-0 bg-slate-900 transition-transform duration-700 group-hover:scale-105" />
-                    <div className="absolute inset-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center transition-opacity duration-500 group-hover:opacity-20" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
-
-                    <div className="absolute bottom-0 left-0 right-0 p-12 text-white">
-                        <div className="w-16 h-16 rounded-xl bg-orange-500 flex items-center justify-center mb-6 shadow-lg shadow-orange-500/20 group-hover:scale-110 transition-transform duration-300">
-                            <Dumbbell className="w-8 h-8 text-white" />
-                        </div>
-                        <h3 className="text-4xl font-black mb-4 uppercase tracking-tighter">{t('stories.irontemple')}</h3>
-                        <p className="text-lg text-slate-300 font-bold mb-8 line-clamp-2">
-                            &quot;{t('stories.irontemple_quote')}&quot;
-                        </p>
-                        <div className="flex items-center space-x-4 text-orange-400 font-black tracking-widest uppercase text-xs">
-                            <span>{t('stories.view_playbook')}</span>
-                            <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
-                        </div>
-                    </div>
-                </Link>
-
-                {/* Green Theory */}
-                <Link to="/playbook/greentheory" className="group relative h-[500px] rounded-[48px] overflow-hidden cursor-pointer">
-                    <div className="absolute inset-0 bg-black transition-transform duration-700 group-hover:scale-105" />
-                    <div className="absolute inset-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center transition-opacity duration-500 group-hover:opacity-20" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-
-                    <div className="absolute bottom-0 left-0 right-0 p-12 text-white">
-                        <div className="w-16 h-16 rounded-xl bg-[#ccff00] flex items-center justify-center mb-6 shadow-lg shadow-[#ccff00]/20 group-hover:scale-110 transition-transform duration-300">
-                            <Zap className="w-8 h-8 text-black" />
-                        </div>
-                        <h3 className="text-4xl font-black mb-4 uppercase tracking-tighter text-[#ccff00]">{t('stories.greentheory')}</h3>
-                        <p className="text-lg text-slate-300 font-bold mb-8 line-clamp-2">
-                            &quot;{t('stories.greentheory_quote')}&quot;
-                        </p>
-                        <div className="flex items-center space-x-4 text-[#ccff00] font-black tracking-widest uppercase text-xs">
-                            <span>{t('stories.view_playbook')}</span>
-                            <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
-                        </div>
-                    </div>
-                </Link>
-            </div>
-
-            <div className="text-center">
-                <Link
-                    to="/wall-of-fame"
-                    className="inline-flex items-center space-x-4 px-12 py-6 bg-slate-950 text-white rounded-2xl font-black text-xs uppercase tracking-[0.3em] hover:bg-slate-800 transition-all group shadow-2xl shadow-slate-200"
-                >
-                    <span>{t('stories.view_wall')}</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-blue-500" />
-                </Link>
-            </div>
-        </div>
-    </section>
-);
-};
-
-const HowItWorks = () => {
-    const { t } = useTranslation();
-    const onboardingUrl = import.meta.env.VITE_ONBOARDING_URL || 'https://onboarding.uat.gymia.fit';
-    const steps = [
-        { num: '01', title: t('how_it_works.step1_title', 'Build Your Brand'), desc: t('how_it_works.step1_desc', 'Pick your name, colours and logo. See a live preview of your branded mobile app and admin dashboard.') },
-        { num: '02', title: t('how_it_works.step2_title', 'Complete Onboarding'), desc: t('how_it_works.step2_desc', 'Choose features, enter your admin details and submit. You will receive an activation email within seconds.') },
-        { num: '03', title: t('how_it_works.step3_title', 'Customise in Dashboard'), desc: t('how_it_works.step3_desc', 'Log in to your Gym Admin dashboard, fine-tune branding, toggle modules and connect socials.') },
-        { num: '04', title: t('how_it_works.step4_title', 'Generate & Test APK'), desc: t('how_it_works.step4_desc', 'Hit the Generate UAT Build button. In minutes, download a branded Android APK to test with your team.') },
-    ];
-    return (
-        <section className="py-32 bg-white">
-            <div className="max-w-7xl mx-auto px-6">
-                <div className="text-center max-w-3xl mx-auto mb-20">
-                    <div className="w-px h-12 bg-blue-600 mx-auto" />
-                    <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight mt-6">
-                        {t('how_it_works.title', 'From Zero to')} <span className="text-blue-600">{t('how_it_works.title2', 'Your Own App')}</span>
-                    </h2>
-                    <p className="text-xl text-slate-500 font-bold mt-6">{t('how_it_works.subtitle', 'Four steps. No code. Full control.')}</p>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {steps.map((step) => (
-                        <div key={step.num} className="relative p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:border-blue-200 hover:shadow-xl transition-all group">
-                            <div className="text-6xl font-black text-slate-100 group-hover:text-blue-100 transition-colors absolute top-4 right-6 select-none">{step.num}</div>
-                            <div className="relative z-10">
-                                <h3 className="text-xl font-black text-slate-900 mb-3">{step.title}</h3>
-                                <p className="text-slate-500 font-medium leading-relaxed">{step.desc}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <div className="text-center mt-16">
-                    <a
-                        href={onboardingUrl}
-                        className="inline-flex items-center gap-3 px-12 py-5 bg-blue-600 text-white rounded font-black text-xs uppercase tracking-[0.2em] hover:bg-blue-700 transition-all shadow-2xl shadow-blue-200 group"
-                    >
-                        {t('how_it_works.cta', 'Start Building Now')}
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </a>
-                </div>
-            </div>
-        </section>
-    );
-};
+import { BrandShowcase } from '../components/BrandShowcase';
+import { HowItWorks } from '../components/HowItWorks';
+import { ValueProp } from '../components/ValueProp';
+import { Features } from '../components/Features';
+import { SocialProof } from '../components/SocialProof';
+import { Pricing } from '../components/Pricing';
+import { CTASection } from '../components/CTASection';
+import { FAQ } from '../components/FAQ';
 
 const Home = () => {
     return (
         <div className="bg-white">
             <Hero />
             <BrandPreview />
+            <BrandShowcase />
             <HowItWorks />
-            <BenefitsGrid />
-            <StoriesSection />
+            <div id="features">
+                <ValueProp />
+                <Features />
+            </div>
+            <SocialProof />
+            <div id="pricing">
+                <Pricing />
+            </div>
+            <FAQ />
+            <CTASection />
         </div>
     );
 };

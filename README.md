@@ -16,6 +16,26 @@ This is a **React + TypeScript + Vite** application designed to showcase FitNexa
 - **Routing:** React Router DOM
 - **Deployment:** Vercel
 
+## 🔑 Environment Variables
+
+To run this project, you will need to add the following environment variables to your `.env` file.
+
+| Variable              | Description                                                                        | Default                            |
+| :-------------------- | :--------------------------------------------------------------------------------- | :--------------------------------- |
+| `VITE_ONBOARDING_URL` | The URL for the Onboarding Application. Links the "Get Started" / "Login" buttons. | `https://onboarding.uat.gymia.fit` |
+
+## 📦 Third Party Libraries
+
+Key dependencies used in this project:
+
+| Library                   | Purpose                                                          |
+| :------------------------ | :--------------------------------------------------------------- |
+| **react-i18next**         | Internationalization (i18n) handling for multi-language support. |
+| **framer-motion**         | Production-ready animation library for React.                    |
+| **lucide-react**          | Beautiful & consistent icon toolkit.                             |
+| **react-router-dom**      | Client-side routing for React applications.                      |
+| **clsx / tailwind-merge** | Utilities for constructing className strings conditionally.      |
+
 ## 🏗️ Project Structure
 
 ```

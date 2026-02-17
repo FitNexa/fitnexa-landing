@@ -1,11 +1,11 @@
 {
     "hero": {
-        "badge": "Iron-Clad Operations 2026",
-        "title_line1": "Strength",
-        "title_line2": "in Data.",
-        "description": "Transform your physical floor into a high-performance digital empire. Your brand, your members, your muscle—professionalized with FitNexa's elite digital infrastructure.",
-        "cta_primary": "Start Your Build",
-        "cta_secondary": "The Blueprints"
+        "badge": "The Modern Standard for Gym Management",
+        "title_highlight": "Modernize Your Entire Gym.",
+        "title_main": "Simple. Secure. Smart.",
+        "subtitle": "Transform your facility into a seamless digital ecosystem. We handle the admin, payments, and access control—giving you more time to focus on your community.",
+        "cta_start": "Start Your Transformation",
+        "cta_demo": "See How It Works"
     },
     "hero_cards": {
         "active_memberships": "Active Memberships",
@@ -14,40 +14,113 @@
         "growth": "Growth",
         "retention": "Retention"
     },
-    "brand_preview": {
-        "section_label": "Transformation Engine",
-        "title_line1": "Your Brand.",
-        "title_line2": "Our Power.",
-        "description": "The FitNexa \"Chameleon\" engine adapts instantly to your identity. Experience how your gym looks when professionalized with elite digital infrastructure.",
-        "gym_name_label": "Facility Designation",
-        "gym_name_placeholder": "Enter Gym Name...",
-        "color_label": "Brand Color DNA",
-        "live_sync": "Live Sync Active",
-        "cta": "Start Building Your App"
+    "value_prop": {
+        "ghost_title": "The Problem: Ghost Members",
+        "ghost_desc": "15% of your active database has stopped coming. You don't know who they are, so you can't save them.",
+        "payments_title": "The Problem: Failed Payments",
+        "payments_desc": "Your 'auto-pay' isn't automatic if you're chasing verified cards manually. Revenue leakage is silent.",
+        "staff_title": "The Problem: Admin Overload",
+        "staff_desc": "Your best trainers are wasting billable hours at the front desk. They should be training, not typing.",
+        "brand_title": "The Problem: Brand Dilution",
+        "brand_desc": "You built a premium facility, but your members use a generic app that looks like 2010. It kills your prestige."
     },
-    "brand_preview_preview": {
-        "member_status": "Member Status",
-        "elite_tier": "Elite Tier",
-        "points": "Points",
-        "steps": "Steps",
-        "time": "Time",
-        "recommended_training": "Recommended Training",
-        "performance_dashboard": "Performance Dashboard",
-        "operations_hub": "Operations Hub",
-        "export_analytics": "Export Analytics",
-        "metrics": "Metrics L{{num}}",
-        "retention_curve": "Global Retention Curve"
+    "features": {
+        "title": "The Operating System for Physical Facilities",
+        "subtitle": "We don't just manage members. We digitize your entire operational floor.",
+        "members_title": "The 'Chameleon' White-Label App",
+        "members_desc": "Fully branded iOS/Android mobile app. Your logo. Your colors. Your name on their home screen.",
+        "members_benefit_1": "Instant credibility.",
+        "members_benefit_2": "Perceived as premium brand.",
+        "members_benefit_3": "Stop sending them to 3rd party aggregators.",
+        "billing_title": "Revenue Autopilot",
+        "billing_desc": "System handles subscriptions, drop-ins, and failed payment dunning automatically.",
+        "billing_benefit_1": "Collect 100% of owed revenue.",
+        "billing_benefit_2": "Instant access revocation on failure.",
+        "billing_benefit_3": "No awkward front-desk conversations.",
+        "access_title": "Iron-Clad Access Control",
+        "access_desc": "Dynamic QR Code Generation & 24/7 Gate Integration. Codes rotate every 60 seconds.",
+        "access_benefit_1": "0% Tailgating.",
+        "access_benefit_2": "Extend hours to 24/7.",
+        "access_benefit_3": "No night-shift staff required.",
+        "marketing_title": "Multi-Location Command Center",
+        "marketing_desc": "Manage 1 gym or 100 from a single login. Global pricing updates.",
+        "marketing_benefit_1": "Scale without friction.",
+        "marketing_benefit_2": "Open next location in clicks.",
+        "marketing_benefit_3": "Unified global reporting.",
+        "nutrition_title": "AI Nutritionist",
+        "nutrition_desc": "Members analyze meals via photo. AI calculates macros instantly. No manual entry.",
+        "nutrition_benefit_1": "Google Gemini Integration.",
+        "nutrition_benefit_2": "Real-time macro tracking.",
+        "nutrition_benefit_3": "Personalized meal suggestions.",
+        "squads_title": "Community Squads",
+        "squads_desc": "Turn your gym into a tribe. Members join squads, compete on leaderboards, and push each other.",
+        "squads_benefit_1": "Reduce churn by 40%.",
+        "squads_benefit_2": "Automated weekly challenges.",
+        "squads_benefit_3": "Social feed interaction."
+    },
+    "pricing": {
+        "title": "Simple Pricing",
+        "subtitle": "No hidden fees. No surprises.",
+        "starter_title": "Starter",
+        "starter_price": "$49",
+        "starter_period": "/mo",
+        "starter_desc": "Perfect for small studios and startups.",
+        "pro_title": "Professional",
+        "pro_price": "$99",
+        "pro_period": "/mo",
+        "pro_desc": "For growing gyms that need more power.",
+        "enterprise_title": "Enterprise",
+        "enterprise_price": "Custom",
+        "enterprise_period": "",
+        "enterprise_desc": "For multi-location franchises.",
+        "feature_members": "Members",
+        "feature_staff": "Staff Accounts",
+        "no_contract": "No Contract • Cancel Anytime"
+    },
+    "cta_section": {
+        "title": "Stop Running Your Gym on Manual Mode.",
+        "subtitle": "Your competitors are digitizing. Don't get left behind. Professionalize your operations today.",
+        "cta_button": "Book Your Strategy Demo"
+    },
+    "nav": {
+        "brand": "FitNexa",
+        "brand_elite": "Elite",
+        "features": "Features",
+        "pricing": "Pricing",
+        "playbook": "The Playbook",
+        "login": "Login",
+        "get_started": "Get Started",
+        "the_floor": "The Floor",
+        "wall_of_fame": "Wall of Fame",
+        "build_empire": "Build Your Empire",
+        "contact_sales": "Contact Sales"
+    },
+    "footer": {
+        "tagline": "The Professional Standard in Digital Infrastructure.",
+        "platform": "The Platform",
+        "corporate": "Corporate",
+        "legal": "Legal & Terms",
+        "the_floor": "The Floor",
+        "wall_of_fame": "Wall of Fame",
+        "playbook": "The Playbook",
+        "founders": "Founders",
+        "join_crew": "Join the Crew",
+        "privacy": "Privacy Policy",
+        "contract": "Terms of Service",
+        "audit_logs": "Security",
+        "terms": "Terms of Service",
+        "copyright": "© {{year}} FitNexa. All rights reserved."
     },
     "benefits": {
-        "title_line1": "Elite Facilities",
-        "title_line2": "Demands Modern Solutions.",
-        "description": "Ditch the legacy spreadsheets. FitNexa provides the iron-clad foundation your gym business needs to dominate the market.",
-        "branded_core_title": "The Branded Core",
-        "branded_core_desc": "Your logo, your colors, your rules. Launch a custom member app that carries the weight of your professional brand.",
-        "automated_title": "Automated Muscle",
-        "automated_desc": "Stop the mechanical administrative work. Automate billing, staff scheduling, and member tracking with total precision.",
-        "community_title": "Community Gold",
-        "community_desc": "Turn lone wolves into your gym's most loyal advocates with social leaderboards and iron-clad engagement tools."
+        "title_line1": "Why Smart Owners",
+        "title_line2": "Switch to FitNexa.",
+        "description": "We build for the floor, not just the back office. FitNexa treats members like athletes who need premium digital experiences.",
+        "branded_core_title": "Reduce Payroll by 20%",
+        "branded_core_desc": "Automate the front desk. Your app handles check-ins, bookings, and payments.",
+        "automated_muscle_title": "Eliminate Revenue Leakage",
+        "automated_muscle_desc": "Access control is tied directly to payment status. No pay? No entry.",
+        "community_gold_title": "Sleep at Night",
+        "community_gold_desc": "Know exactly who is in your facility, when they arrived, and how much they paid. Real-time."
     },
     "stories": {
         "title_line1": "Proof of",
@@ -60,39 +133,260 @@
         "greentheory": "Green Theory",
         "greentheory_quote": "High intensity beats high volume. We proved it with data."
     },
+    "how_it_works": {
+        "title": "From Zero to",
+        "title2": "Digitizing Your Gym",
+        "subtitle": "Four steps. No code. Full control.",
+        "step1_title": "Build Your Brand",
+        "step1_desc": "Pick your name, color DNA and logo. See a live preview of your branded mobile app and admin dashboard.",
+        "step2_title": "Complete Onboarding",
+        "step2_desc": "Choose features, enter your admin details and submit. You will receive an activation email within seconds.",
+        "step3_title": "Customise in Dashboard",
+        "step3_desc": "Log in to your Gym Admin dashboard, fine-tune branding, toggle modules and connect socials.",
+        "step4_title": "Deploy to Stores",
+        "step4_desc": "Hit 'Generate Build'. We automatically publish your custom app to both the Apple App Store and Google Play Store.",
+        "cta": "Start Building Now"
+    },
+    "brand_preview": {
+        "section_label": "Transformation Engine",
+        "title_line1": "Your Brand.",
+        "title_line2": "Our Power.",
+        "description": "The FitNexa \"Chameleon\" engine adapts instantly to your identity. Experience how your gym looks when professionalized with elite digital infrastructure.",
+        "gym_name_label": "Facility Designation",
+        "gym_name_placeholder": "Enter Gym Name...",
+        "color_label": "Brand Color DNA",
+        "live_sync": "Live Sync Active",
+        "cta": "Start Building Your App",
+        "mobile_preview": "Mobile App",
+        "gym_admin_preview": "Gym Admin"
+    },
+    "brand_preview_preview": {
+        "member_status": "Member Status",
+        "elite_tier": "Elite Tier",
+        "points": "Points",
+        "steps": "Steps",
+        "time": "Time",
+        "recommended_training": "Recommended Training",
+        "performance_dashboard": "Performance Dashboard",
+        "operations_hub": "Operations Hub",
+        "export_analytics": "Export Analytics",
+        "metrics": "Metrics L{{num}}",
+        "retention_curve": "Global Retention Curve",
+        "elite_suffix": "Elite"
+    },
     "blog": {
-        "section_label": "The Playbook",
-        "title_line1": "Iron-Clad",
-        "title_line2": "Insights.",
-        "description": "Expert strategies for gym founders aiming to scale their physical footprint into a high-performance digital empire.",
-        "search_placeholder": "Search the archives...",
-        "read_more": "Read More",
-        "no_results_title": "No Archives Found",
-        "no_results_desc": "Try searching for different high-performance keywords.",
-        "category_all": "All"
+        "section_label": "The Knowledge Base",
+        "title_line1": "The Growth",
+        "title_line2": "Playbook.",
+        "description": "Elite strategies for the modern gym owner. From retention mechanics to automated staffing.",
+        "search_placeholder": "Search archives...",
+        "category_all": "All Intelligence",
+        "read_more": "Read Analysis",
+        "no_results_title": "No Intel Found",
+        "no_results_desc": "Try adjusting your search criteria."
     },
-    "nav": {
-        "brand": "FitNexa",
-        "brand_elite": "Elite",
-        "the_floor": "The Floor",
-        "wall_of_fame": "Wall of Fame",
-        "playbook": "The Playbook",
-        "build_empire": "Build Your Empire",
-        "contact_sales": "Contact Sales"
+    "blogs": {
+        "categories": {
+            "retention": "Retention Muscle",
+            "admin": "Admin Strength",
+            "floor": "Floor Strategy",
+            "governance": "Governance",
+            "global": "Global Strategy",
+            "revenue": "Revenue Muscle",
+            "innovation": "Innovation",
+            "branding": "Branding"
+        },
+        "stop_churn_digital_title": "The Iron-Clad Strategy: Stopping Member Churn with Digital Ecosystems",
+        "stop_churn_digital_excerpt": "Why traditional gyms lose 30% of their base annually and how a high-performance digital core can lock in loyalty.",
+        "stop_churn_digital_body": {
+            "p1": "In the physical gym business, churn is the silent killer. Most owners accept a 30-50% annual turnover as 'industry standard.' At FitNexa, we view that as a failure of infrastructure.",
+            "h1": "The Convenience Trap",
+            "p2": "Members don't leave because they hate your equipment; they leave because they've lost the habit. Without a digital layer, your gym only exists for them when they are physically on the floor. A branded app ensures your facility is in their pocket 24/7.",
+            "li1": "Automated 'We miss you' triggers based on turnstile data.",
+            "li2": "In-app community squads that create social debt.",
+            "li3": "Performance tracking that visualizes their 'muscle' growth.",
+            "p3": "Strength isn't just in your weights; it's in your retention data."
+        },
+        "staff_automation_roi_title": "Automated Staffing: How to Save 120 Hours of Admin Monthly",
+        "staff_automation_roi_excerpt": "Stop paying your high-impact trainers to chase paper. Lean into automated scheduling and billing.",
+        "staff_automation_roi_body": {
+            "p1": "If your trainers are spending 20% of their day on WhatsApp scheduling sessions, you are losing money on every rep. Automation isn't about replacing people; it's about freeing them to do what they do best: train.",
+            "h1": "Unified Scheduling",
+            "p2": "FitNexa's elite scheduling engine syncs trainer availability directly with member apps. No back-and-forth. No double bookings. Just pure efficiency.",
+            "quote": "Since automating our PT scheduling, our bookings have increased by 85% because members can book on impulse at 11 PM."
+        },
+        "branded_app_vs_generic_title": "Branded vs. Generic: Why Your Own App is Non-Negotiable",
+        "branded_app_vs_generic_excerpt": "Generic 'gym finder' apps dilute your brand. Discover why owning your digital real estate is key to premium pricing.",
+        "branded_app_vs_generic_body": {
+            "p1": "You spent thousands on high-end equipment and interior design. Why would you send your members to a generic third-party app that looks like everyone else's?",
+            "h1": "The Professionalism Gap",
+            "p2": "A white-labeled app isn't just a widget. It's a statement. It tells your members that your facility is an elite tier above the competition. When they see YOUR logo every morning on their lock screen, your brand value compounds."
+        },
+        "security_data_governance_title": "Iron-Clad Security: Protecting Your Facility's Data",
+        "security_data_governance_excerpt": "With GDPR and SOC2 standards, data security is no longer optional. How FitNexa built a fortress for your member info.",
+        "security_data_governance_body": {
+            "p1": "Member data includes financial info, health metrics, and home addresses. A breach isn't just a tech issue; it's an existential threat to your gym empire.",
+            "h1": "Governance by Design",
+            "p2": "We implement bank-level encryption and multi-factor authentication for all staff access. Your members' data is safe, and your business is compliant."
+        },
+        "multi_location_scale_title": "Scaling the Empire: Managing 10+ Locations with One Dashboard",
+        "multi_location_scale_excerpt": "Multi-location management shouldn't mean multi-headaches. Centralize your governance.",
+        "multi_location_scale_body": {
+            "p1": "The jump from 1 to 5 locations is usually where gym owners break. Fragmented data leads to bad decisions. FitNexa provides a 'bird's eye' view that lets you toggle between sites in milliseconds.",
+            "h1": "Global Permissions",
+            "p2": "Update a pricing sheet once. Deploy it to 100 gyms instantly. That's how empires are built."
+        },
+        "pt_roi_optimization_title": "Personal Training ROI: Boosting Revenue per Square Foot",
+        "pt_roi_optimization_excerpt": "Maximize floor efficiency. How digital PT management increases member LTV by 30%.",
+        "pt_roi_optimization_body": {
+            "p1": "Your floor space is expensive. If sessions aren't being tracked and upsold digitally, you're leaving cash on the lobby floor.",
+            "h1": "The Digital Upsell",
+            "p2": "By integrating training metrics into the member app, members see progress and feel the value, making them 3x more likely to renew their PT packages."
+        },
+        "social_loyalty_squads_title": "Social Loyalty: Turning Lone Wolves into Community Squads",
+        "social_loyalty_squads_excerpt": "Human connection is the best retention tool. How 'Squads' keep members from quitting.",
+        "social_loyalty_squads_body": {
+            "p1": "People join for the weights, but they stay for the tribe. FitNexa's 'Squad' logic creates micro-communities within your facility.",
+            "h1": "Leaderboard Psychology",
+            "p2": "Healthy competition leads to consistent attendance. Consistent attendance leads to zero churn."
+        },
+        "data_driven_facility_title": "Strength in Numbers: The Data-Driven Facility",
+        "data_driven_facility_excerpt": "Identify peak hours and equipment bottlenecks using real-time heatmaps.",
+        "data_driven_facility_body": {
+            "p1": "Do you know which squat rack is used the most? Or why Tuesdays at 6 PM are busier than Mondays? Data-driven owners don't guess; they know.",
+            "h1": "Predictive Modeling",
+            "p2": "FitNexa analyzes your turnstile data to predict peak congestion, allowing you to optimize staff levels and save on utilities."
+        },
+        "peak_performance_scheduling_title": "Peak Performance: High-Tier Scheduling for Elite Gyms",
+        "peak_performance_scheduling_excerpt": "Managing high-traffic studios requires precision. Learn how to eliminate waitlists.",
+        "peak_performance_scheduling_body": {
+            "p1": "A full class is great. A line of angry members outside who couldn't get in is a branding nightmare. Our scheduling engine uses intelligent waitlists and 'hot seat' notifications to ensure 100% capacity utilization."
+        },
+        "future_ai_gym_ops_title": "The AI Revolution: The Future of Gym Operations",
+        "future_ai_gym_ops_excerpt": "How generative AI and machine learning will personalize every member's journey.",
+        "future_ai_gym_ops_body": {
+            "p1": "AI isn't just for chatbots. In 2026, AI will predict which members are likely to churn 3 months before they even realize they're losing interest. FitNexa is already building that future."
+        },
+        "boutique_pivot_title": "The Boutique Pivot: Transitioning to Premium Studio Standards",
+        "boutique_pivot_excerpt": "How to command $200+ memberships by leveraging high-tier digital amenities and community squads.",
+        "boutique_pivot_body": {
+            "p1": "Traditional 'big box' gyms are struggling to justify pricing. The future is boutique. But a boutique studio isn't just about small classes; it's about an elite digital experience.",
+            "h1": "The Amenity of the Mind",
+            "p2": "Your app is as much an amenity as your showers or weights. It provides the structure and social scaffolding that members pay a premium for."
+        },
+        "lead_gen_muscle_title": "Lead Gen Muscle: Converting App Users into Lifelong Members",
+        "lead_gen_muscle_excerpt": "Stop letting leads go cold. Use automated onboarding and 'FitNexa Trials' to lock in memberships.",
+        "lead_gen_muscle_body": {
+            "p1": "A download is a commitment. If someone downloads your branded app but doesn't step on the floor within 48 hours, they are losing interest. Our automated nurture flows ensure they stay focused on their goals—and your facility."
+        },
+        "hybrid_revenue_frontier_title": "Hybrid Training: The New Revenue Frontier for 2026",
+        "hybrid_revenue_frontier_excerpt": "Earn even when your members stay home. How to monetize digital workout programs.",
+        "hybrid_revenue_frontier_body": {
+            "p1": "The gym has walls, but your business shouldn't. Hybrid training allows your trainers to manage members' progress even when they're traveling or at home. It's a second revenue stream that requires zero extra floor space."
+        },
+        "financial_automation_mastery_title": "Cash Flow Strength: Mastering Automated Billing and Debt Recovery",
+        "financial_automation_mastery_excerpt": "Eliminate credit card failures and late payments with FitNexa's iron-clad billing engine.",
+        "financial_automation_mastery_body": {
+            "p1": "Failed payments are the primary cause of unintentional churn. Members don't even realize their card expired until their fob stops working—and then they just decide to quit. FitNexa's predictive billing warns them before it happens, keeping your cash flow and their habits intact."
+        },
+        "top_tier_talent_title": "Attracting Elite Talent: Why Top Trainers Choose Tech-Enabled Gyms",
+        "top_tier_talent_excerpt": "The best trainers want the best tools. How providing a digital workspace reduces staff turnover.",
+        "top_tier_talent_body": {
+            "p1": "Top-tier training talent is a commodity. They will go where they can make the most money with the least administrative friction. By providing them with FitNexa's Trainer Suite, you make it impossible for them to go back to paper logs and WhatsApp scheduling."
+        },
+        "buy_vs_build_cost_title": "The $100k Trap: Hidden Costs of Building from Scratch",
+        "buy_vs_build_cost_excerpt": "Why custom development often leads to technical bankruptcy for gym owners. A brutal breakdown of the initial investment.",
+        "buy_vs_build_cost_body": {
+            "p1": "Every ambitious gym owner eventually asks: \"Should we just build our own app?\" It sounds like the ultimate brand flex. In reality, for 99% of facilities, it's a fast track to technical bankruptcy.",
+            "h1": "The Initial Hit",
+            "p2": "A professional-grade mobile app starting from zero isn't a weekend project. You're looking at $100k+ in design, engineering, and QA just to get through the door.",
+            "p3": "Before you've even signed up your first digital member, you've spent an empire's fortune. FitNexa gives you that same infrastructure instantly."
+        },
+        "maintenance_nightmare_title": "The Maintenance Weight: Why Sustaining Custom Tech is a Nightmare",
+        "maintenance_nightmare_excerpt": "Building is only 20% of the battle. Discover why the ongoing 'maintenance tax' kills custom gym apps.",
+        "maintenance_nightmare_body": {
+            "p1": "You survived the build. The app is live. You think the spending is over. It's actually just beginning. This is what we call 'The Maintenance Weight.'",
+            "h1": "OS Updates & Technical Debt",
+            "p2": "Apple and Google update their systems annually. If you don't patch your custom code, it breaks. If you don't pay 24/7 engineers, your member data is at risk.",
+            "quote": "Custom apps are a liability. Enterprise platforms like FitNexa are an asset that evolve for you."
+        },
+        "quit_whenever_no_lockin_title": "The Exit Strategy: Why FitNexa's 'Quit Anytime' Policy is Your Safety Net",
+        "quit_whenever_no_lockin_excerpt": "We win your business every single month. No iron-clad multi-year contracts. Total freedom.",
+        "quit_whenever_no_lockin_body": {
+            "p1": "Most enterprise software companies want to lock you into 3-year \"iron-clad\" contracts. They spend more on their legal team than their product. At FitNexa, we do the opposite.",
+            "h1": "Partnership, Not Prison",
+            "p2": "We believe if our digital infrastructure isn't making your gym more profitable, you shouldn't be paying for it. That's why we have a strict **Quit Whenever You Want** policy.",
+            "li1_strong": "No Multi-Year Lock-ins:",
+            "li1": "Use us as long as we provide value.",
+            "li2_strong": "Data Ownership:",
+            "li2": "If you leave, you take your member data with you. No ransoms.",
+            "li3_strong": "Performance Guarantee:",
+            "li3": "We work to earn your subscription every 30 days.",
+            "quote": "Gym owners value strength and freedom. We give you both."
+        },
+        "chameleon_identity_roi_title": "The Chameleon Effect: How Brand Consistency Drives Membership Value",
+        "chameleon_identity_roi_excerpt": "Discover how a unified brand experience across physical and digital spaces increases perceived value and member loyalty.",
+        "chameleon_identity_roi_body": {
+            "p1": "Your brand isn't just a logo; it's a promise of quality. When a member walks into your gym and then opens your app, the transition should be seamless. This is the 'Chameleon Effect'.",
+            "h1": "Visual Trust",
+            "p2": "Inconsistent branding creates friction. If your app looks generic but your gym is premium, you're sending mixed signals. FitNexa allows you to inject your brand's DNA directly into the digital experience, ensuring that every touchpoint reinforces your elite status.",
+            "quote": "Since aligning our digital identity with our facility's high-end aesthetic, our premium membership upgrades have increased by 25%."
+        },
+        "scaling_without_friction_title": "Scaling Without Friction: The Digital Infrastructure of Multi-Site Success",
+        "scaling_without_friction_excerpt": "Why the jump from one to five locations is the 'Valley of Death' for gym owners—and how to build a bridge over it.",
+        "scaling_without_friction_body": {
+            "p1": "Scaling a gym business is deceptively difficult. The processes that work for one location often break at three. Without a centralized digital core, you're not building an empire; you're building a collection of headaches.",
+            "h1": "Unified Governance",
+            "p2": "FitNexa provides the governance tools to manage multiple sites as a single entity. Update your class schedule, rollout a new PT package, or change your pricing enterprise-wide in a single click. That's how you scale at speed without the friction."
+        }
     },
-    "footer": {
-        "tagline": "The Iron-Clad Standard in Digital Infrastructure for the Global Fitness Enterprise.",
-        "platform": "The Platform",
-        "corporate": "Corporate",
-        "legal": "Legal & Terms",
-        "the_floor": "The Floor",
-        "wall_of_fame": "Wall of Fame",
-        "playbook": "The Playbook",
-        "founders": "Founders",
-        "join_crew": "Join the Crew",
-        "privacy": "Privacy Vault",
-        "contract": "The Contract",
-        "audit_logs": "Audit Logs",
-        "copyright": "© {{year}} FitNexa Systems Inc. High Performance Guaranteed."
+    "gym_themes": {
+        "irontemple_challenge": "Frustrated by fragmented data across 8 locations. Legacy systems were brittle, causing member churn and administrative chaos.",
+        "irontemple_solution": "Implemented FitNexa Elite Governance, centralizing all member data and launching a unified high-performance app for all clubs.",
+        "irontemple_result": "Operations normalized instantly. Retention spiked by 42% and the brand was successfully professionalized for global expansion.",
+        "fitlife_challenge": "Struggled to build a community beyond the workout. Members came in, worked out, and left without connecting.",
+        "fitlife_solution": "Launched the FitNexa Community Suite with social feeds, challenges, and event scheduling directly in the app.",
+        "fitlife_result": "Created a vibrant digital ecosystem. Class attendance maxed out and member referrals tripled within 6 months.",
+        "greentheory_challenge": "Needed a brand experience as loud and intense as the workouts. Standard white-label apps felt too corporate and boring.",
+        "greentheory_solution": "Customized FitNexa with 'Green Theory' neon aesthetics and gamified logic to match the high-octane vibe.",
+        "greentheory_result": "The app became an extension of the culture. Members share stats daily, driving organic viral growth on social media.",
+        "elite_challenge": "Premium pricing was hard to justify without a premium digital layer. Scheduling was manual and disconnected from the member journey.",
+        "elite_solution": "Deployed the FitNexa 'Chameleon' app with integrated PT booking and social loyalty squads for the highest tier members.",
+        "elite_result": "Professionalized the brand within 30 days. PT bookings nearly doubled and member lifetime value increased significantly."
+    },
+    "growth_playbook": {
+        "nexus_of_growth": "The Nexus of Growth",
+        "choose_experience_title_line1": "Choose Your",
+        "choose_experience_title_line2": "Experience.",
+        "choose_experience_desc": "Select a brand archetype to see the FitNexa Growth Playbook through their unique lens.",
+        "playbook_tier": "Playbook Tier",
+        "elite_tier_level": "L{{level}} Elite",
+        "immersive_experience": "Immersive Experience",
+        "open_blueprint": "Open Blueprint",
+        "switch_experience": "Switch Experience",
+        "edition": "Edition",
+        "title_line1": "The Growth",
+        "title_line2": "Playbook.",
+        "description": "Your facility is more than four walls. It's a high-performance engine waiting for the right digital fuel.",
+        "transformation": "The Transformation",
+        "chaos_to_empire_line1": "From Chaos",
+        "chaos_to_empire_line2": "to",
+        "chaos_to_empire_line3": "Empire.",
+        "the_solution": "The Solution",
+        "the_result": "The Result"
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know about modernizing your gym.",
+        "q1": "How long does it take to get my app?",
+        "a1": "Instantly. As soon as you complete the onboarding wizard (about 5 minutes), you get access to your admin dashboard and a preview of your mobile app. We submit to the App Stores immediately after you approve the design.",
+        "q2": "Can I migrate my existing members?",
+        "a2": "Yes. We provide a simple CSV import tool. You can upload your entire member database in seconds, and they will receive welcome emails with their login credentials automatically.",
+        "q3": "Am I locked into a long-term contract?",
+        "a3": "Never. FitNexa is a monthly subscription. You can cancel at any time with one click. We believe in earning your business every single month.",
+        "q4": "Do I need to be 'tech-savvy' to use this?",
+        "a4": "No. We built FitNexa specifically for gym owners, not IT pros. If you can use email, you can use our dashboard. It's designed to be simple, intuitive, and foolproof.",
+        "q5": "Is my member data secure?",
+        "a5": "Absolutely. We use bank-grade encryption (AES-256) and strictly adhere to GDPR and data privacy standards. Your data belongs to you, and we protect it like it's our own."
     }
 }

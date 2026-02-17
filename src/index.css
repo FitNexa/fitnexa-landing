@@ -2,49 +2,61 @@
 
 @theme {
   --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
-  --color-primary: #0f172a;
-  /* Navy */
+
+  /* Modern SaaS Dark Theme Palette */
+  --color-primary: #0B1120;
+  /* Deep Obsidian */
   --color-secondary: #334155;
   /* Slate */
-  --color-brand: #2563eb;
-  /* Professional Blue */
+  --color-brand: #3B82F6;
+  /* Electric Blue */
+  --color-brand-dark: #2563EB;
+  --color-accent: #6366f1;
+  /* Indigo */
 
-  /* Brand Specific Dynamic Variables */
-  --color-brand-primary: var(--brand-primary, #2563eb);
-  --color-brand-secondary: var(--brand-secondary, #0f172a);
-  --color-brand-accent: var(--brand-accent, #3b82f6);
+  /* Brand Specific Dynamic Variables - kept for backward compatibility/custom branding */
+  --color-brand-primary: var(--brand-primary, #3B82F6);
+  --color-brand-secondary: var(--brand-secondary, #0B1120);
+  --color-brand-accent: var(--brand-accent, #6366f1);
   --color-brand-background: var(--brand-background, #f8fafc);
   --color-brand-surface: var(--brand-surface, #ffffff);
 }
 
 @layer base {
   body {
-    @apply bg-white text-slate-900 antialiased overflow-x-hidden;
+    @apply bg-slate-50 text-slate-900 antialiased overflow-x-hidden;
     font-family: var(--font-inter);
+    /* Subtle mesh gradient background */
+    background-image: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 100% 0%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
   }
 }
 
 @layer components {
+  .container-padding {
+    @apply px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+
   .glass-card {
-    @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-xl;
+    @apply bg-white/80 backdrop-blur-xl border border-white/40 shadow-xl shadow-slate-200/50;
+  }
+
+  .glass-card-dark {
+    @apply bg-slate-900/80 backdrop-blur-xl border border-slate-700/50 shadow-xl shadow-black/20;
   }
 
   .btn-primary {
-    @apply bg-slate-900 text-white px-6 py-3 rounded-2xl font-bold hover:bg-slate-800 transition-all active:scale-95 shadow-lg shadow-slate-200;
+    @apply bg-slate-900 text-white px-6 py-3 rounded-xl font-semibold hover:bg-slate-800 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 active:scale-95 shadow-md shadow-slate-900/10;
   }
 
   .btn-brand {
     background-color: var(--brand-primary);
     color: white;
-    @apply px-6 py-3 rounded-2xl font-bold transition-all active:scale-95 shadow-lg;
-  }
-
-  .btn-brand:hover {
-    filter: brightness(1.1);
+    @apply px-6 py-3 rounded-xl font-semibold hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 hover:brightness-110 transition-all duration-300 active:scale-95 shadow-md;
   }
 
   .btn-secondary {
-    @apply bg-white text-slate-900 px-6 py-3 rounded-2xl font-bold border border-slate-200 hover:bg-slate-50 transition-all active:scale-95;
+    @apply bg-white text-slate-700 px-6 py-3 rounded-xl font-semibold border border-slate-200 hover:bg-slate-50 hover:text-slate-900 hover:border-slate-300 transition-all duration-300 active:scale-95 shadow-sm;
   }
 
   .text-brand {
@@ -59,6 +71,10 @@
     @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600;
   }
 
+  .text-gradient-light {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-300;
+  }
+
   .text-brand-gradient {
     background-image: linear-gradient(to right, var(--brand-primary), var(--brand-accent));
     @apply bg-clip-text text-transparent;
@@ -67,13 +83,13 @@
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-slate-50;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-slate-200 rounded-full hover:bg-slate-300 transition-colors;
+  @apply bg-slate-300/80 rounded-full border-4 border-solid border-transparent bg-clip-content hover:bg-slate-400/80 transition-colors;
 }

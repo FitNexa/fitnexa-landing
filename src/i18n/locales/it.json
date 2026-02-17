@@ -1,98 +1,79 @@
 {
     "hero": {
-        "badge": "Eccellenza Operativa 2026",
-        "title_line1": "Forza",
-        "title_line2": "attraverso i Dati.",
-        "description": "Trasforma il tuo spazio fisico in un impero digitale ad alte prestazioni. Il tuo brand, i tuoi iscritti, la tua forza—professionalizzati con l'infrastruttura digitale d'élite di FitNexa.",
-        "cta_primary": "Crea il Tuo Impero",
-        "cta_secondary": "I Progetti"
+        "badge": "Operazioni Blindate 2026",
+        "title_highlight": "Gestisci la Tua Palestra",
+        "title_main": "Come una Multinazionale.",
+        "subtitle": "Smetti di perdere il 30% dei tuoi incassi in amministrazione manuale. FitNexa automatizza le operazioni, garantisce l'accesso 24/7 e fa crescere il tuo brand.",
+        "cta_start": "Richiedi la Tua Demo",
+        "cta_demo": "Guarda Demo (2 Min)"
     },
-    "hero_cards": {
-        "active_memberships": "Abbonamenti Attivi",
-        "peak_performance": "Massime Prestazioni",
-        "sync_active": "Sincronizzazione Attiva",
-        "growth": "Crescita",
-        "retention": "Fidelizzazione"
+    "value_prop": {
+        "ghost_title": "Membri Fantasma",
+        "ghost_desc": "Il 15% della tua base attiva ha smesso di venire, e non sai nemmeno chi sono.",
+        "payments_title": "Pagamenti Falliti",
+        "payments_desc": "Il tuo 'pagamento automatico' non è automatico se devi inseguire le carte rifiutate manualmente.",
+        "staff_title": "Colli di Bottiglia",
+        "staff_desc": "I tuoi migliori trainer sprecano ore fatturabili alla reception per fare i check-in.",
+        "brand_title": "Diluizione del Brand",
+        "brand_desc": "Hai costruito una palestra premium, ma i tuoi membri usano un'app generica che sembra del 2010."
     },
-    "brand_preview": {
-        "section_label": "Motore di Trasformazione",
-        "title_line1": "Il Tuo Brand.",
-        "title_line2": "La Nostra Potenza.",
-        "description": "Il motore \"Chameleon\" di FitNexa si adatta istantaneamente alla tua identità. Scopri l'aspetto della tua palestra quando viene potenziata da un'infrastruttura digitale d'élite.",
-        "gym_name_label": "Nome della Struttura",
-        "gym_name_placeholder": "Inserisci Nome Palestra...",
-        "color_label": "DNA Cromatico del Brand",
-        "live_sync": "Sincronizzazione in Tempo Reale",
-        "cta": "Sviluppa la Tua App"
+    "features": {
+        "title": "Il Sistema Operativo per Strutture Fisiche",
+        "subtitle": "Non gestiamo solo i membri. Digitalizziamo tutto il tuo piano operativo.",
+        "members_title": "L'App Camaleonte White-Label",
+        "members_desc": "App mobile iOS/Android completamente brandizzata. Il tuo logo. I tuoi colori.",
+        "members_benefit_1": "Credibilità istantanea.",
+        "members_benefit_2": "Percepita come brand premium.",
+        "members_benefit_3": "Smetti di inviare i membri agli aggregatori.",
+        "billing_title": "Entrate col Pilota Automatico",
+        "billing_desc": "Il sistema gestisce abbonamenti e recupero crediti automaticamente.",
+        "billing_benefit_1": "Incassa il 100% delle entrate dovute.",
+        "billing_benefit_2": "Revoca accesso istantanea se il pagamento fallisce.",
+        "billing_benefit_3": "Niente conversazioni imbarazzanti alla reception.",
+        "access_title": "Controllo Accessi Blindato",
+        "access_desc": "Codici QR dinamici e integrazione tornelli 24/7.",
+        "access_benefit_1": "0% frodi.",
+        "access_benefit_2": "Estendi gli orari a 24/7.",
+        "access_benefit_3": "Nessun bisogno di personale notturno.",
+        "marketing_title": "Centro di Comando Multi-Sede",
+        "marketing_desc": "Gestisci 1 o 100 palestre da un unico login.",
+        "marketing_benefit_1": "Scala senza attrito.",
+        "marketing_benefit_2": "Apri la prossima sede in pochi clic.",
+        "marketing_benefit_3": "Reportistica globale unificata."
     },
-    "brand_preview_preview": {
-        "member_status": "Stato Iscritto",
-        "elite_tier": "Livello Elite",
-        "points": "Punti",
-        "steps": "Passi",
-        "time": "Tempo",
-        "recommended_training": "Allenamento Consigliato",
-        "performance_dashboard": "Dashboard Prestazioni",
-        "operations_hub": "Centro Operativo",
-        "export_analytics": "Esporta Analisi",
-        "metrics": "Metriche L{{num}}",
-        "retention_curve": "Curva di Fidelizzazione Globale"
+    "pricing": {
+        "title": "Prezzi Semplici",
+        "subtitle": "Nessun costo nascosto. Nessuna sorpresa.",
+        "starter_title": "Starter",
+        "starter_price": "49€",
+        "starter_period": "/mese",
+        "starter_desc": "Perfetto per piccoli studi e startup.",
+        "pro_title": "Professional",
+        "pro_price": "99€",
+        "pro_period": "/mese",
+        "pro_desc": "Per palestre in crescita che necessitano di più potenza.",
+        "enterprise_title": "Enterprise",
+        "enterprise_price": "Su misura",
+        "enterprise_period": "",
+        "enterprise_desc": "Per franchising con sedi multiple.",
+        "feature_members": "Membri",
+        "feature_staff": "Account Staff",
+        "no_contract": "Nessun Contratto • Disdici Quando Vuoi"
     },
-    "benefits": {
-        "title_line1": "Strutture d'Elite",
-        "title_line2": "Richiedono Soluzioni Moderne.",
-        "description": "Dimentica i fogli di calcolo obsoleti. FitNexa fornisce le fondamenta solide necessarie per dominare il mercato.",
-        "branded_core_title": "Identità di Brand",
-        "branded_core_desc": "Il tuo logo, i tuoi colori, le tue regole. Lancia un'app dedicata ai soci che rispecchi la professionalità del tuo brand.",
-        "automated_title": "Potenza Automatizzata",
-        "automated_desc": "Elimina il lavoro amministrativo meccanico. Automatizza fatturazione, turni del personale e gestione iscritti con precisione assoluta.",
-        "community_title": "Valore della Community",
-        "community_desc": "Trasforma i singoli utenti nei sostenitori più fedeli della tua palestra con classifiche social e strumenti di coinvolgimento avanzati."
-    },
-    "stories": {
-        "title_line1": "Prova di",
-        "title_line2": "Dominio.",
-        "description": "Scopri come le strutture di alto livello usano FitNexa per surclassare la concorrenza.",
-        "view_playbook": "Vedi il Playbook",
-        "view_wall": "Vedi Wall of Fame",
-        "irontemple": "Iron Temple",
-        "irontemple_quote": "Non siamo solo sopravvissuti alle grandi catene. Le abbiamo superate.",
-        "greentheory": "Green Theory",
-        "greentheory_quote": "L'alta intensità batte l'alto volume. Lo abbiamo dimostrato con i dati."
-    },
-    "blog": {
-        "section_label": "The Playbook",
-        "title_line1": "Intuizioni",
-        "title_line2": "Concrete.",
-        "description": "Strategie avanzate per fondatori di palestre che mirano a scalare la propria presenza fisica in un impero digitale ad alte prestazioni.",
-        "search_placeholder": "Cerca negli archivi...",
-        "read_more": "Leggi di più",
-        "no_results_title": "Nessun Risultato Trovato",
-        "no_results_desc": "Prova a cercare con altre parole chiave.",
-        "category_all": "Tutti"
+    "cta_section": {
+        "title": "Pronto a Professionalizzare la tua Palestra?",
+        "subtitle": "Unisciti a centinaia di proprietari di palestre che si fidano di FitNexa.",
+        "cta_button": "Inizia Ora"
     },
     "nav": {
-        "brand": "FitNexa",
-        "brand_elite": "Elite",
-        "the_floor": "Gestione Sala",
-        "wall_of_fame": "Wall of Fame",
-        "playbook": "The Playbook",
-        "build_empire": "Crea il Tuo Impero",
-        "contact_sales": "Contatta il Team Vendite"
+        "features": "Funzionalità",
+        "pricing": "Prezzi",
+        "login": "Accedi",
+        "get_started": "Inizia"
     },
     "footer": {
-        "tagline": "L'Infrastruttura Digitale Definitiva per le Imprese Fitness Globali.",
-        "platform": "La Piattaforma",
-        "corporate": "Azienda",
-        "legal": "Note Legali & Termini",
-        "the_floor": "Gestione Sala",
-        "wall_of_fame": "Wall of Fame",
-        "playbook": "The Playbook",
-        "founders": "Fondatori",
-        "join_crew": "Unisciti a Noi",
-        "privacy": "Privacy Vault",
-        "contract": "Il Contratto",
-        "audit_logs": "Log di Audit",
-        "copyright": "© {{year}} FitNexa Systems Inc. Prestazioni Garantite."
+        "copyright": "© {{year}} FitNexa. Tutti i diritti riservati.",
+        "privacy": "Privacy Policy",
+        "terms": "Termini di Servizio"
     }
 }

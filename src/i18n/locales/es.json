@@ -1,98 +1,79 @@
 {
     "hero": {
-        "badge": "Operaciones Sólidas 2026",
-        "title_line1": "Fuerza",
-        "title_line2": "en Datos.",
-        "description": "Transforma tu espacio físico en un imperio digital de alto rendimiento. Tu marca, tus miembros, tu músculo—profesionalizados con la infraestructura digital de élite de FitNexa.",
-        "cta_primary": "Comienza tu Construcción",
-        "cta_secondary": "Los Planos"
+        "badge": "Operaciones Blindadas 2026",
+        "title_highlight": "Gestione su Gimnasio",
+        "title_main": "Como una Multinacional.",
+        "subtitle": "Deje de perder el 30% de sus ingresos en administración manual. FitNexa automatiza sus operaciones, impone el acceso 24/7 y hace crecer su marca.",
+        "cta_start": "Solicite su Demo",
+        "cta_demo": "Ver Demo (2 Min)"
     },
-    "hero_cards": {
-        "active_memberships": "Membresías Activas",
-        "peak_performance": "Rendimiento Máximo",
-        "sync_active": "Sincronización Activa",
-        "growth": "Crecimiento",
-        "retention": "Retención"
+    "value_prop": {
+        "ghost_title": "Miembros Fantasma",
+        "ghost_desc": "El 15% de su base activa ha dejado de venir, y usted ni siquiera sabe quiénes son.",
+        "payments_title": "Pagos Fallidos",
+        "payments_desc": "Su 'pago automático' no es automático si tiene que perseguir tarjetas rechazadas manualmente.",
+        "staff_title": "Cuellos de Botella",
+        "staff_desc": "Sus mejores entrenadores pierden horas facturables en la recepción haciendo check-ins.",
+        "brand_title": "Dilución de Marca",
+        "brand_desc": "Construyó un gimnasio premium, pero sus miembros usan una app genérica que parece de 2010."
     },
-    "brand_preview": {
-        "section_label": "Motor de Transformación",
-        "title_line1": "Tu Marca.",
-        "title_line2": "Nuestro Poder.",
-        "description": "El motor \"Camaleón\" de FitNexa se adapta al instante a tu identidad.",
-        "gym_name_label": "Denominación del Centro",
-        "gym_name_placeholder": "Introduce nombre del gimnasio...",
-        "color_label": "ADN del Color de Marca",
-        "live_sync": "Sincronización Live Activa",
-        "cta": "Empieza a Construir tu App"
+    "features": {
+        "title": "El Sistema Operativo para Instalaciones Físicas",
+        "subtitle": "No solo gestionamos miembros. Digitalizamos todo su piso operativo.",
+        "members_title": "La App Camaleón de Marca Blanca",
+        "members_desc": "App móvil iOS/Android totalmente con su marca. Su logo. Sus colores.",
+        "members_benefit_1": "Credibilidad instantánea.",
+        "members_benefit_2": "Percibida como marca premium.",
+        "members_benefit_3": "Deje de enviar a sus miembros a agregadores.",
+        "billing_title": "Ingresos en Piloto Automático",
+        "billing_desc": "El sistema maneja suscripciones y cobros fallidos automáticamente.",
+        "billing_benefit_1": "Cobre el 100% de los ingresos debidos.",
+        "billing_benefit_2": "Revocación de acceso instantánea si falla el pago.",
+        "billing_benefit_3": "Sin conversaciones incómodas en recepción.",
+        "access_title": "Control de Acceso Blindado",
+        "access_desc": "Códigos QR dinámicos e integración con torniquetes 24/7.",
+        "access_benefit_1": "0% de fraude.",
+        "access_benefit_2": "Extienda horarios a 24/7.",
+        "access_benefit_3": "Sin necesidad de personal nocturno.",
+        "marketing_title": "Centro de Comando Multi-Sede",
+        "marketing_desc": "Gestione 1 o 100 gimnasios desde un solo login.",
+        "marketing_benefit_1": "Escale sin fricción.",
+        "marketing_benefit_2": "Abra la siguiente sede en clics.",
+        "marketing_benefit_3": "Reportes globales unificados."
     },
-    "brand_preview_preview": {
-        "member_status": "Estado de Miembro",
-        "elite_tier": "Nivel Elite",
-        "points": "Puntos",
-        "steps": "Pasos",
-        "time": "Tiempo",
-        "recommended_training": "Entrenamiento Recomendado",
-        "performance_dashboard": "Panel de Rendimiento",
-        "operations_hub": "Centro de Operaciones",
-        "export_analytics": "Exportar Análisis",
-        "metrics": "Métricas L{{num}}",
-        "retention_curve": "Curva de Retención Global"
+    "pricing": {
+        "title": "Precios Simples",
+        "subtitle": "Sin tarifas ocultas. Sin sorpresas.",
+        "starter_title": "Starter",
+        "starter_price": "49€",
+        "starter_period": "/mes",
+        "starter_desc": "Perfecto para pequeños estudios y startups.",
+        "pro_title": "Profesional",
+        "pro_price": "99€",
+        "pro_period": "/mes",
+        "pro_desc": "Para gimnasios en crecimiento que necesitan más potencia.",
+        "enterprise_title": "Enterprise",
+        "enterprise_price": "A medida",
+        "enterprise_period": "",
+        "enterprise_desc": "Para franquicias con múltiples ubicaciones.",
+        "feature_members": "Miembros",
+        "feature_staff": "Cuentas de Staff",
+        "no_contract": "Sin Contrato • Cancela Cuando Quieras"
     },
-    "benefits": {
-        "title_line1": "Instalaciones de Élite",
-        "title_line2": "Exigen Soluciones Modernas.",
-        "description": "Olvídate de las hojas de cálculo obsoletas. FitNexa proporciona los cimientos sólidos que tu gimnasio necesita.",
-        "branded_core_title": "El Núcleo de Marca",
-        "branded_core_desc": "Tu logo, tus colores, tus reglas. Lanza una app de miembros personalizada.",
-        "automated_title": "Músculo Automatizado",
-        "automated_desc": "Acaba con el trabajo administrativo mecánico. Automatiza facturación y seguimiento.",
-        "community_title": "Oro de la Comunidad",
-        "community_desc": "Convierte lobos solitarios en tus defensores más leales."
-    },
-    "stories": {
-        "title_line1": "Prueba de",
-        "title_line2": "Dominio.",
-        "description": "Descubre cómo los centros de primer nivel usan FitNexa para dominar la competencia.",
-        "view_playbook": "Ver Playbook",
-        "view_wall": "Ver Wall of Fame",
-        "irontemple": "Iron Temple",
-        "irontemple_quote": "No solo sobrevivimos a la invasión de las grandes cadenas. Las aplastamos.",
-        "greentheory": "Green Theory",
-        "greentheory_quote": "La alta intensidad supera al alto volumen. Lo probamos con datos."
-    },
-    "blog": {
-        "section_label": "El Playbook",
-        "title_line1": "Perspectivas",
-        "title_line2": "Sólidas.",
-        "description": "Estrategias expertas para fundadores de gimnasios que buscan escalar.",
-        "search_placeholder": "Buscar en los archivos...",
-        "read_more": "Leer más",
-        "no_results_title": "No se encontraron archivos",
-        "no_results_desc": "Prueba a buscar con otras palabras.",
-        "category_all": "Todos"
+    "cta_section": {
+        "title": "¿Listo para Profesionalizar tu Gimnasio?",
+        "subtitle": "Únete a cientos de dueños de gimnasios que confían en FitNexa.",
+        "cta_button": "Empezar Ahora"
     },
     "nav": {
-        "brand": "FitNexa",
-        "brand_elite": "Elite",
-        "the_floor": "El Piso",
-        "wall_of_fame": "Wall of Fame",
-        "playbook": "El Playbook",
-        "build_empire": "Construye tu Imperio",
-        "contact_sales": "Contactar Ventas"
+        "features": "Características",
+        "pricing": "Precios",
+        "login": "Iniciar Sesión",
+        "get_started": "Empezar"
     },
     "footer": {
-        "tagline": "El Estándar Sólido en Infraestructura Digital para la Empresa Fitness Global.",
-        "platform": "La Plataforma",
-        "corporate": "Corporate",
-        "legal": "Legal y Términos",
-        "the_floor": "El Piso",
-        "wall_of_fame": "Wall of Fame",
-        "playbook": "El Playbook",
-        "founders": "Fundadores",
-        "join_crew": "Únete al Equipo",
-        "privacy": "Bóveda de Privacidad",
-        "contract": "El Contrato",
-        "audit_logs": "Registros de Auditoría",
-        "copyright": "© {{year}} FitNexa Systems Inc. Rendimiento Garantizado."
+        "copyright": "© {{year}} FitNexa. Todos los derechos reservados.",
+        "privacy": "Política de Privacidad",
+        "terms": "Términos de Servicio"
     }
 }
